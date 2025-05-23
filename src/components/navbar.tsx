@@ -86,7 +86,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          href="/contact-us"
+          href="/contact"
           className={`${modernButtonBase.trim()} ${contactButtonStyles}`}
         >
           CONTACT

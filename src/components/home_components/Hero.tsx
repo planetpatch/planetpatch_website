@@ -1,15 +1,8 @@
 // components/Hero.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-import { Gemunu_Libre } from 'next/font/google'; // Assuming you want to use the same font
+import { gemunuLibre } from '../ui/fonts';
 
-// FONT INITIALIZATION (if you want to explicitly use it here, or ensure it cascades from layout)
-const gemunuLibre = Gemunu_Libre({
-  subsets: ['latin'],
-  weight: ['600', '700', '800'], // Hero headlines often use bolder weights
-  variable: '--font-gemunu-libre',
-  display: 'swap',
-});
 
 // Button styles for Hero section (can be adapted from Navbar's modernButtonBase)
 // Adding back transform and scale for a modern feel, adjust as needed.

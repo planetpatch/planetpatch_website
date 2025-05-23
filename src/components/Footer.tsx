@@ -6,10 +6,10 @@ import { gemunuLibre } from './ui/fonts';
 
 // If you don't want to install react-icons yet, you can use simple text placeholders:
 const FacebookPlaceholder = () => <span className="text-xl">FB</span>;
-const TwitterPlaceholder = () => <span className="text-xl">T</span>;
+// const TwitterPlaceholder = () => <span className="text-xl">T</span>;
 const InstagramPlaceholder = () => <span className="text-xl">Insta</span>;
-const LinkedinPlaceholder = () => <span className="text-xl">L</span>;
-
+// const LinkedinPlaceholder = () => <span className="text-xl">L</span>;
+const BlueskyPlaceholder = () => <span className="text-xl">BlueSky</span>;
 
 interface FooterLink {
   href: string;
@@ -26,10 +26,11 @@ const footerNavLinks: FooterLink[] = [
 
 // Example social links - update with your actual URLs
 const socialLinks = [
-  { href: "https://facebook.com", icon: FacebookPlaceholder, label: "Facebook" },
-  { href: "https://twitter.com", icon: TwitterPlaceholder, label: "Twitter" },
-  { href: "https://instagram.com", icon: InstagramPlaceholder, label: "Instagram" },
-  { href: "https://linkedin.com", icon: LinkedinPlaceholder, label: "LinkedIn" },
+  { href: "https://www.facebook.com/planetpatch.dev/", icon: FacebookPlaceholder, label: "Facebook" },
+//   { href: "https://twitter.com", icon: TwitterPlaceholder, label: "Twitter" },
+    { href: "https://www.instagram.com/planetpatch.dev/", icon: InstagramPlaceholder, label: "Instagram" },
+    { href: "https://bsky.app/profile/planetpatch.bsky.social", icon: BlueskyPlaceholder, label: "BlueSky" },
+//   { href: "https://linkedin.com", icon: LinkedinPlaceholder, label: "LinkedIn" },
 ];
 
 const Footer = () => {

@@ -1,13 +1,10 @@
 import Navbar from "@/components/navbar";
+import Navbar2 from "@/components/navbar_2";
 
 export default function Home() {
   return (
     <>
-      <Navbar/>
-        <div 
-    className="new-start">new start
-    className Pranab mouse
-    </div>
+      <Navbar />
     </>
 
   );

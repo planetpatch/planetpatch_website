@@ -14,7 +14,7 @@ const gemunuLibre = Gemunu_Libre({
 // Button styles for Hero section (can be adapted from Navbar's modernButtonBase)
 // Adding back transform and scale for a modern feel, adjust as needed.
 const heroButtonBase = `
-  px-6 py-3 text-lg font-semibold rounded-md shadow-md 
+  px-6 py-3 text-xl font-bold rounded-md shadow-md 
   transform transition-all duration-200 ease-in-out 
   hover:scale-[1.03] hover:shadow-lg 
   focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
@@ -81,15 +81,15 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
           <Link
             href="/how-can-i-help" // Update with actual link
-            className={`${heroButtonBase.trim()} ${primaryHeroButtonStyles}`}
+            className={`${heroButtonBase.trim()} ${gemunuLibre.className}  ${primaryHeroButtonStyles}`}
           >
-            How Can I Help?
+            START CRAFTING
           </Link>
           <Link
             href="/energy-tracker" // Update with actual link
-            className={`${heroButtonBase.trim()} ${secondaryHeroButtonStyles}`}
+            className={`${heroButtonBase.trim()} ${gemunuLibre.className}  ${secondaryHeroButtonStyles}`}
           >
-            Energy Tracker
+            ENERGY TRACKER
           </Link>
         </div>
       </div>

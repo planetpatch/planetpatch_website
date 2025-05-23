@@ -1,5 +1,5 @@
 // components/Navbar.tsx
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { Gemunu_Libre } from 'next/font/google';
 
@@ -15,12 +15,8 @@ const gemunuLibre = Gemunu_Libre({
 interface NavLink {
   href: string;
   label: string;
-  // Dropdown properties are removed as per your current navLinks structure
-  // hasDropdown?: boolean;
-  // dropdownItems?: DropdownItem[];
 }
 
-// Updated navLinks (CONTACT US is now a CTA button)
 const navLinks: NavLink[] = [
   { href: "/about", label: "ABOUT" },
   { href: "/resources", label: "RESOURCES" },
@@ -28,72 +24,76 @@ const navLinks: NavLink[] = [
   { href: "/community", label: "COMMUNITY" },
 ];
 
-// Common button classes for 8-bit style
-const eightBitButtonBase = "border-2 border-black rounded-sm transition-all duration-100 flex items-center justify-center";
-const eightBitButtonShadow = "shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]";
-const eightBitButtonHoverActive = "hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px]";
+// Base classes for modern minimalistic buttons
+// Includes padding, font, rounding, custom green glow, transform for animation, transition properties,
+// hover effects (scale, glow enhancement), and focus-visible states for accessibility.
+// Green-400 RGB: (52, 211, 153)
+const modernButtonBase = `
+  px-5 py-2 text-xl font-bold rounded-md 
+  shadow-[0_0_8px_rgba(52,211,153,0.3)] 
+transition-all duration-200 ease-in-out  hover:shadow-[0_0_12px_rgba(52,211,153,0.5)] 
+  focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+  dark:hover:shadow-[0_0_12px_rgba(52,211,153,0.8)] 
+`;
+
+// Specific styles for the Donate button (from your modifications)
+const donateButtonStyles = `
+
+bg-green-600 border border-green-600  text-white
+hover:text-green-600 hover:bg-white
+focus-visible:ring-green-500
+
+`;
+
+// Specific styles for the Contact button (from your modifications)
+const contactButtonStyles = 
+`bg-white text-green-600 
+border border-green-600
+hover:border-green-600
+focus-visible:ring-green-500`;
+
 
 const Navbar = () => {
   return (
-    <header className={`flex items-center justify-between py-4 px-6 md:px-12 ${gemunuLibre.className} relative z-50 min-h-28`}>
-      {/* Logo */}
-      <div className="py-0 self-start md:self-center"> {/* Align logo to start on small screens if right side wraps */}
+    <header
+      className={`dark:bg-[#122112]  flex items-center justify-between px-6 md:px-12 py-6 ${gemunuLibre.className} relative z-50`}
+    >
+      {/* Logo section */}
+      <div className="py-0">
         <Link href="/">
-          <Image src="/patravi_logo.png" alt="PlanetPatch Logo" width={144} height={144} priority />
+          PlanetPatch
+          {/* <Image src="/patravi_logo.png" alt="PlanetPatch Logo" width={124} height={124} priority /> */}
         </Link>
       </div>
 
-      {/* Right Section: Patcher Action Pad button + Nav + CTAs */}
-      <div className="flex flex-col items-end space-y-3 text-right"> {/* Aligns content to the far right and stacks them */}
-        
-        {/* Patcher Action Pad Button */}
-        <div>
+      {/* Navigation Links and CTA buttons section */}
+      <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 md:gap-x-6">
+        {navLinks.map((link) => (
           <Link
-            href="/patcher-action-pad" // Update this href as needed
-            className={`${eightBitButtonBase} ${eightBitButtonShadow} ${eightBitButtonHoverActive} px-5 py-2 text-base font-bold text-white bg-green-600 hover:bg-green-700`}
+            key={link.label}
+            href={link.href}
+            className="text-xl font-semibold text-green-600 hover:text-green-900 dark:text-[var(--foreground)] dark:hover:text-green-600 transition-colors duration-150"
           >
-            PATCHER ACTION PAD
+            {link.label}
           </Link>
-        </div>
+        ))}
 
-        {/* Navigation Links and CTA buttons */}
-        <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 md:gap-x-6"> {/* Using gap for spacing, justify-end if it wraps */}
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-xl font-semibold text-green-600 hover:text-green-900 dark:text-[var(--foreground)] dark:hover:text-green-600 transition-colors duration-150"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <Link
+          href="/donate"
+          className={`${modernButtonBase.trim()} ${donateButtonStyles}`}
+        >
+          DONATE
+        </Link>
 
-          {/* CTA Buttons */}
-          <Link
-            href="/donate" // Update this href as needed
-            className={`${eightBitButtonBase} ${eightBitButtonShadow} ${eightBitButtonHoverActive} px-5 py-2 text-xl font-bold text-white bg-green-600 hover:bg-green-700`}
-          >
-            DONATE
-          </Link>
-
-          <Link
-            href="/contact-us" // This was previously a navLink, now a styled CTA
-            className={`${eightBitButtonBase} ${eightBitButtonShadow} ${eightBitButtonHoverActive} px-5 py-2 text-xl font-bold text-green-600 bg-white hover:bg-gray-100`}
-          >
-            CONTACT
-          </Link>
-        </nav>
-      </div>
+        <Link
+          href="/contact-us"
+          className={`${modernButtonBase.trim()} ${contactButtonStyles}`}
+        >
+          CONTACT
+        </Link>
+      </nav>
     </header>
   );
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-

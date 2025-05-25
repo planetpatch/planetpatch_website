@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -13,51 +14,89 @@ export default function About() {
             backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0)), url('/home_assets/hero_image.png')`,
           }}
         >
-        <div className="max-w-7xl pl-16">
-          <h1 className="text-4xl font-bold text-gray-800">About PlanetPatch</h1>
-          <div className="mt-2 text-sm text-gray-600">
-          <span className="font-semibold">Home</span> &gt; About Us
+          <div className="max-w-7xl pl-16">
+            <h1 className="text-4xl font-bold text-gray-800">About PlanetPatch</h1>
+            <div className="mt-2 text-sm text-gray-600">
+              <span className="font-semibold">Home</span> &gt; About Us
             </div>
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className="py-12 bg-white px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            {/* Who We Are */}
-            <div className="md:flex md:items-center mb-16">
-              <img
-                src="https://www.monstertreeservice.com/cms/thumbnails/24/1080x540/images/articles/MTS_OUW_FiveTypesofFastGrowingTrees_BlogPhoto_Jun23_20230531.jpg"
-                alt="PlanetPatch team in action"
-                className="md:w-1/2 rounded-lg shadow-lg mb-6 md:mb-0 md:mr-10"
-              />
-              <div className="md:w-1/2">
-                <h2 className="text-2xl font-bold mb-4 text-black">Who We Are</h2>
-                <p className="text-gray-700">
-                  PlanetPatch is an environmental non-profit dedicated to building a greener future
-                  through community action, youth engagement, and sustainability education. We
-                  believe every patch of the planet matters—and with your help, we can restore them
-                  one step at a time.
-                </p>
-              </div>
+        {/* Main Content with Sidebar */}
+        <div className="py-12 bg-white px-2 sm:px-4 lg:px-6">
+          <div className="max-w-7xl flex flex-col md:flex-row pl-6">
+            
+            {/* Sidebar Navigation */}
+            <div className="md:w-1/4 mb-10 md:mb-0 md:mr-4">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">About Us</h2>
+              <ul className="space-y-4 text-gray-600">
+                <li>
+                  <Link href="/about/what-we-do" className="font-bold text-black hover:underline">
+                    What We Do
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/our-team" className="hover:text-black hover:underline">
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/mission-vision" className="hover:text-black hover:underline">
+                    Mission / Vision / Beliefs
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/data" className="hover:text-black hover:underline">
+                    Annual Data
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/partners" className="hover:text-black hover:underline">
+                    Partners
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/contact" className="hover:text-black hover:underline">
+                    Contact PlanetPatch
+                  </Link>
+                </li>
+              </ul>
             </div>
 
-            {/* What We Do */}
-            <div className="md:flex md:items-center">
-              <div className="md:w-1/2 md:mr-10 order-2 md:order-1">
-                <h2 className="text-2xl font-bold mb-4 text-black">What We Do</h2>
-                <p className="text-gray-700">
-                  From organizing local clean-ups to running educational workshops in schools,
-                  PlanetPatch empowers people of all ages to make eco-conscious choices. We plant
-                  trees, restore habitats, and advocate for green policies to make a lasting
-                  impact—locally and globally.
-                </p>
+            {/* Main Section */}
+            <div className="md:w-3/4">
+              {/* Who We Are */}
+              <div className="md:flex md:items-center mb-16">
+                <img
+                  src="https://www.monstertreeservice.com/cms/thumbnails/24/1080x540/images/articles/MTS_OUW_FiveTypesofFastGrowingTrees_BlogPhoto_Jun23_20230531.jpg"
+                  alt="PlanetPatch team in action"
+                  className="md:w-1/2 rounded-lg shadow-lg mb-6 md:mb-0 md:mr-10"
+                />
+                <div className="md:w-1/2">
+                  <h2 className="text-2xl font-bold mb-4 text-black">Who We Are</h2>
+                  <p className="text-gray-700">
+                    PlanetPatch is an environmental non-profit dedicated to building a greener
+                    future through community action, youth engagement, and sustainability
+                    education.
+                  </p>
+                </div>
               </div>
-              <img
-                src="https://www.esf.edu/ere/endreny/GICalculator/RainGardenTN.jpg"
-                alt="Community event"
-                className="md:w-1/2 rounded-lg shadow-lg mb-6 md:mb-0 order-1 md:order-2"
-              />
+
+              {/* What We Do */}
+              <div className="md:flex md:items-center">
+                <div className="md:w-1/2 md:mr-10 order-2 md:order-1">
+                  <h2 className="text-2xl font-bold mb-4 text-black">What We Do</h2>
+                  <p className="text-gray-700">
+                    From organizing clean-ups to running workshops, PlanetPatch empowers people of
+                    all ages to make eco-conscious choices.
+                  </p>
+                </div>
+                <img
+                  src="https://www.esf.edu/ere/endreny/GICalculator/RainGardenTN.jpg"
+                  alt="Community event"
+                  className="md:w-1/2 rounded-lg shadow-lg mb-6 md:mb-0 order-1 md:order-2"
+                />
+              </div>
             </div>
           </div>
         </div>

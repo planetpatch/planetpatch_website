@@ -20,8 +20,8 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { href: "/about", label: "ABOUT" },
   { href: "/resources", label: "RESOURCES" },
+  { href: "/projects", label: "PROJECTS" },
   { href: "/updates", label: "UPDATES" },
-  { href: "/community", label: "COMMUNITY" },
 ];
 
 // Base classes for modern minimalistic buttons

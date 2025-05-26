@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { gemunuLibre } from "@/components/ui/fonts";
 
 export default function About() {
   return (
@@ -15,7 +16,7 @@ export default function About() {
           }}
         >
           <div className="max-w-7xl pl-16">
-            <h1 className="text-4xl font-bold text-gray-800">About PlanetPatch</h1>
+            <h1 className={`text-8xl font-bold text-green-700 ${gemunuLibre.className}`}>About PlanetPatch</h1>
             <div className="mt-2 text-sm text-gray-600">
               <span className="font-semibold">Home</span> &gt; About Us
             </div>
@@ -30,33 +31,38 @@ export default function About() {
             <div className="md:w-1/4 mb-10 md:mb-0 md:mr-4">
               <h2 className="text-xl font-semibold mb-4 text-gray-800">About Us</h2>
               <ul className="space-y-4 text-gray-600">
+              <li>
+                  <Link href="#what-we-do" className="font-bold text-black hover:underline">
+                    Who We Are
+                  </Link>
+                </li>
                 <li>
-                  <Link href="/about/what-we-do" className="font-bold text-black hover:underline">
+                  <Link href="#what-we-do" className="font-bold text-black hover:underline">
                     What We Do
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/our-team" className="hover:text-black hover:underline">
+                  <Link href="#our-team" className="hover:text-black hover:underline">
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/mission-vision" className="hover:text-black hover:underline">
+                  <Link href="#mission-vision" className="hover:text-black hover:underline">
                     Mission / Vision / Beliefs
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/data" className="hover:text-black hover:underline">
+                  <Link href="#data" className="hover:text-black hover:underline">
                     Annual Data
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/partners" className="hover:text-black hover:underline">
+                  <Link href="#partners" className="hover:text-black hover:underline">
                     Partners
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/contact" className="hover:text-black hover:underline">
+                  <Link href="#contact" className="hover:text-black hover:underline">
                     Contact PlanetPatch
                   </Link>
                 </li>
@@ -66,7 +72,7 @@ export default function About() {
             {/* Main Section */}
             <div className="md:w-3/4">
               {/* Who We Are */}
-              <div className="md:flex md:items-center mb-16">
+              <div id='who-we-are' className="md:flex md:items-center mb-16">
                 <img
                   src="https://www.monstertreeservice.com/cms/thumbnails/24/1080x540/images/articles/MTS_OUW_FiveTypesofFastGrowingTrees_BlogPhoto_Jun23_20230531.jpg"
                   alt="PlanetPatch team in action"
@@ -83,7 +89,7 @@ export default function About() {
               </div>
 
               {/* What We Do */}
-              <div className="md:flex md:items-center">
+              <div id='what-we-do'className="md:flex md:items-center">
                 <div className="md:w-1/2 md:mr-10 order-2 md:order-1">
                   <h2 className="text-2xl font-bold mb-4 text-black">What We Do</h2>
                   <p className="text-gray-700">

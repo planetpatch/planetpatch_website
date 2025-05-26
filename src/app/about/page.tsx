@@ -1,14 +1,16 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/Footer";
+import About_Main from "./about_components/About_Main";
 import Link from "next/link";
 import { gemunuLibre } from "@/components/ui/fonts";
+import Image from 'next/image';
 
 export default function About() {
   return (
     <>
       <Navbar />
-      <div className="relative bg-gray-100">
-        {/* Background image with overlay */}
+      <About_Main />
+      {/* <div className="relative bg-gray-100">
         <div
           className="relative h-64 w-full bg-cover bg-center flex items-center"
           style={{
@@ -23,55 +25,12 @@ export default function About() {
           </div>
         </div>
 
-        {/* Main Content with Sidebar */}
-        <div className="py-12 bg-white px-2 sm:px-4 lg:px-6">
-          <div className="max-w-7xl flex flex-col md:flex-row pl-6">
             
-            {/* Sidebar Navigation */}
-            <div className="md:w-1/4 mb-10 md:mb-0 md:mr-4">
-              <h2 className="text-xl font-semibold mb-4 text-gray-800">About Us</h2>
-              <ul className="space-y-4 text-gray-600">
-              <li>
-                  <Link href="#what-we-do" className="font-bold text-black hover:underline">
-                    Who We Are
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#what-we-do" className="font-bold text-black hover:underline">
-                    What We Do
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#our-team" className="hover:text-black hover:underline">
-                    Our Team
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#mission-vision" className="hover:text-black hover:underline">
-                    Mission / Vision / Beliefs
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#data" className="hover:text-black hover:underline">
-                    Annual Data
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#partners" className="hover:text-black hover:underline">
-                    Partners
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#contact" className="hover:text-black hover:underline">
-                    Contact PlanetPatch
-                  </Link>
-                </li>
-              </ul>
-            </div>
 
-            {/* Main Section */}
+
+     
             <div className="md:w-3/4">
-              {/* Who We Are */}
+  
               <div id='who-we-are' className="md:flex md:items-center mb-16">
                 <img
                   src="https://www.monstertreeservice.com/cms/thumbnails/24/1080x540/images/articles/MTS_OUW_FiveTypesofFastGrowingTrees_BlogPhoto_Jun23_20230531.jpg"
@@ -88,7 +47,7 @@ export default function About() {
                 </div>
               </div>
 
-              {/* What We Do */}
+ 
               <div id='what-we-do'className="md:flex md:items-center">
                 <div className="md:w-1/2 md:mr-10 order-2 md:order-1">
                   <h2 className="text-2xl font-bold mb-4 text-black">What We Do</h2>
@@ -104,9 +63,8 @@ export default function About() {
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+
+      </div> */}
       <Footer />
     </>
   );

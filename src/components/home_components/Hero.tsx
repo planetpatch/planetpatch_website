@@ -53,7 +53,7 @@ const Hero = () => {
               `}
               // Using text-slate-800 for better contrast on white/light blue gradient
             >
-              Craft Climate Resilience
+              Crafting Climate Resilience
             </h1>
           </div>
 

@@ -1,5 +1,5 @@
 // components/Navbar.tsx
-// import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Gemunu_Libre } from 'next/font/google';
 
@@ -61,8 +61,7 @@ const Navbar = () => {
       {/* Logo section */}
       <div className="py-0">
         <Link href="/">
-          PlanetPatch
-          {/* <Image src="/patravi_logo.png" alt="PlanetPatch Logo" width={124} height={124} priority /> */}
+          <Image src="/home_assets/hero_image.png" alt="PlanetPatch Logo" width={64} height={64} priority />
         </Link>
       </div>
 

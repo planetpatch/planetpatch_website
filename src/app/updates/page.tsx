@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer"
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/Navbar"
 import { gemunuLibre } from "@/components/ui/fonts"
 import Image from "next/image"
 import Link from "next/link"

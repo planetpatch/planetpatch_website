@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer"
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/Navbar"
 import { gemunuLibre } from "@/components/ui/fonts"
 import ProgramCards from "./resources_components/ProgramCards"
 import { mgePrograms,alliantPrograms,govtPrograms,floodingInfo } from "./resources_components/resources_programs"

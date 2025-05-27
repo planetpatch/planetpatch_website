@@ -65,7 +65,7 @@ const About_Main = () => {
                                 </p>
                                     <ul className="list-disc list-inside ml-4 my-2 space-y-1 text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                                         <li>Crafting software that empowers young adults and everyday people to learn and implement collective climate solutions in their daily lives.</li>
-                                        <li>Increase community organizations' technical capacity to build climate resilience.</li>
+                                        <li>Increase community organizations&apos; technical capacity to build climate resilience.</li>
                                     </ul>
                                 
                                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -156,7 +156,7 @@ const About_Main = () => {
                                     Contribute
                                 </h2>
                                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    Your support is crucial to our mission. Whether you're looking to volunteer your time, make a donation, or partner with us, there are many ways to contribute to PlanetPatch's efforts and help scale our impact.
+                                    Your support is crucial to our mission. Whether you&apos;re looking to volunteer your time, make a donation, or partner with us, there are many ways to contribute to PlanetPatch&apos;s efforts and help scale our impact.
                                 </p>
                                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
                                     Join us in crafting a resilient future. Every action, big or small, helps us move closer to a world where both people and nature thrive.

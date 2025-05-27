@@ -1,9 +1,6 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/Footer";
 import About_Main from "./about_components/About_Main";
-import Link from "next/link";
-import { gemunuLibre } from "@/components/ui/fonts";
-import Image from 'next/image';
 
 export default function About() {
   return (

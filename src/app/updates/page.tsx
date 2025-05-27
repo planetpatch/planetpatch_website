@@ -2,6 +2,8 @@ import Footer from "@/components/Footer"
 import Navbar from "@/components/navbar"
 import { gemunuLibre } from "@/components/ui/fonts"
 import Image from "next/image"
+import Link from "next/link"
+import { modernButtonBase,donateButtonStyles } from "@/components/ui/buttons"
 
 interface UpdatePost {
   id: string
@@ -11,69 +13,73 @@ interface UpdatePost {
   category: "News" | "Research" | "Community" | "Partnership"
   readTime: string
   image: string
+  href: string
 }
 
 const updatePosts: UpdatePost[] = [
   {
     id: "1",
-    title: "New Partnership with Local Climate Research Institute",
+    title: "Second Round of Youth Climate Fund Projects feat. PlanetPatch",
     date: "January 15, 2025",
     excerpt:
-      "We're excited to announce our collaboration with the Regional Climate Research Institute to develop innovative adaptation strategies for coastal communities.",
-    category: "Partnership",
+      `We won 2 competitive youth climate fund grants and were named in a City of Madison article!
+      The funds were provided by Bloomberg Philanthropies and administed by the City of Madison
+      and the United Way of Dane County.`,
+    category: "Community",
     readTime: "3 min read",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/youthClimateAction.png",
+    href: 'https://www.cityofmadison.com/news/2025-04-24/new-round-of-youth-climate-fund-projects',
   },
-  {
-    id: "2",
-    title: "Community Resilience Workshop Series Launches",
-    date: "January 10, 2025",
-    excerpt:
-      "Our first series of community-led workshops begins this month, focusing on sustainable agriculture practices and water conservation techniques.",
-    category: "Community",
-    readTime: "2 min read",
-    image: "/placeholder.svg?height=200&width=400",
-  },
-  {
-    id: "3",
-    title: "Climate Data Platform Beta Release",
-    date: "December 28, 2024",
-    excerpt:
-      "We've launched the beta version of our climate data visualization platform, making critical environmental data accessible to communities worldwide.",
-    category: "News",
-    readTime: "4 min read",
-    image: "/placeholder.svg?height=200&width=400",
-  },
-  {
-    id: "4",
-    title: "Research: Impact of Micro-Grids on Rural Resilience",
-    date: "December 20, 2024",
-    excerpt:
-      "Our latest research study examines how community-owned micro-grids are transforming energy resilience in rural areas across three continents.",
-    category: "Research",
-    readTime: "6 min read",
-    image: "/placeholder.svg?height=200&width=400",
-  },
-  {
-    id: "5",
-    title: "Year-End Impact Report: 2024 Achievements",
-    date: "December 15, 2024",
-    excerpt:
-      "Reflecting on a year of growth, community partnerships, and meaningful climate action. See how we've made a difference together.",
-    category: "News",
-    readTime: "5 min read",
-    image: "/placeholder.svg?height=200&width=400",
-  },
-  {
-    id: "6",
-    title: "Indigenous Knowledge Integration Initiative",
-    date: "November 30, 2024",
-    excerpt:
-      "Launching our new program to integrate traditional ecological knowledge with modern climate adaptation strategies.",
-    category: "Community",
-    readTime: "4 min read",
-    image: "/placeholder.svg?height=200&width=400",
-  },
+  // {
+  //   id: "2",
+  //   title: "Community Resilience Workshop Series Launches",
+  //   date: "January 10, 2025",
+  //   excerpt:
+  //     "Our first series of community-led workshops begins this month, focusing on sustainable agriculture practices and water conservation techniques.",
+  //   category: "Community",
+  //   readTime: "2 min read",
+  //   image: "/placeholder.svg?height=200&width=400",
+  // },
+  // {
+  //   id: "3",
+  //   title: "Climate Data Platform Beta Release",
+  //   date: "December 28, 2024",
+  //   excerpt:
+  //     "We've launched the beta version of our climate data visualization platform, making critical environmental data accessible to communities worldwide.",
+  //   category: "News",
+  //   readTime: "4 min read",
+  //   image: "/placeholder.svg?height=200&width=400",
+  // },
+  // {
+  //   id: "4",
+  //   title: "Research: Impact of Micro-Grids on Rural Resilience",
+  //   date: "December 20, 2024",
+  //   excerpt:
+  //     "Our latest research study examines how community-owned micro-grids are transforming energy resilience in rural areas across three continents.",
+  //   category: "Research",
+  //   readTime: "6 min read",
+  //   image: "/placeholder.svg?height=200&width=400",
+  // },
+  // {
+  //   id: "5",
+  //   title: "Year-End Impact Report: 2024 Achievements",
+  //   date: "December 15, 2024",
+  //   excerpt:
+  //     "Reflecting on a year of growth, community partnerships, and meaningful climate action. See how we've made a difference together.",
+  //   category: "News",
+  //   readTime: "5 min read",
+  //   image: "/placeholder.svg?height=200&width=400",
+  // },
+  // {
+  //   id: "6",
+  //   title: "Indigenous Knowledge Integration Initiative",
+  //   date: "November 30, 2024",
+  //   excerpt:
+  //     "Launching our new program to integrate traditional ecological knowledge with modern climate adaptation strategies.",
+  //   category: "Community",
+  //   readTime: "4 min read",
+  //   image: "/placeholder.svg?height=200&width=400",
+  // },
 ]
 
 const getCategoryColor = (category: UpdatePost["category"]) => {
@@ -158,9 +164,17 @@ export default function Updates() {
                   <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">{post.excerpt}</p>
 
                   {/* Read More Link */}
-                  <button className="text-green-600 dark:text-green-400 font-semibold hover:text-green-700 dark:hover:text-green-300 transition-colors">
+                  <Link
+                href={post.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${modernButtonBase.trim()} ${donateButtonStyles.trim()} mt-auto self-start text-center w-full sm:w-auto`}
+              >
+                Read More
+              </Link>
+                  {/* <button className="text-green-600 dark:text-green-400 font-semibold hover:text-green-700 dark:hover:text-green-300 transition-colors">
                     Read More →
-                  </button>
+                  </button> */}
                 </div>
               </article>
             ))}

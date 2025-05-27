@@ -5,7 +5,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { modernButtonBase,donateButtonStyles } from "@/components/ui/buttons"
 
-
 interface UpdatePost {
   id: string
   title: string
@@ -103,6 +102,7 @@ export default function Updates() {
     <>
       <Navbar />
 
+      {/* Hero Section */}
       <section className="bg-gradient-to-b from-green-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="text-center">
@@ -119,6 +119,7 @@ export default function Updates() {
         </div>
       </section>
 
+      {/* Updates Grid */}
       <section className="py-16 md:py-20 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -162,7 +163,7 @@ export default function Updates() {
                   {/* Excerpt */}
                   <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">{post.excerpt}</p>
 
-                  {/* Read More Link */
+                  {/* Read More Link */}
                   <Link
                 href={post.href}
                 target="_blank"

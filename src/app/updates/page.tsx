@@ -103,7 +103,6 @@ export default function Updates() {
     <>
       <Navbar />
 
-      {/* Hero Section */}
       <section className="bg-gradient-to-b from-green-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="text-center">
@@ -120,7 +119,6 @@ export default function Updates() {
         </div>
       </section>
 
-      {/* Updates Grid */}
       <section className="py-16 md:py-20 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

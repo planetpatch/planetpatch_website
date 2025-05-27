@@ -15,8 +15,7 @@ export default function Contact() {
                     Contact Us
                   </h1>
                   <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                    Stay informed about our latest initiatives, research findings, community partnerships, and climate
-                    resilience developments.
+                    Reach out to us about your questions and thoughts!
                   </p>
                 </div>
               </div>

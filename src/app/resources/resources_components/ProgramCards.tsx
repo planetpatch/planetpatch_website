@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { gemunuLibre } from "@/components/ui/fonts"; // Assuming this is your font import path
 import { modernButtonBase,donateButtonStyles } from '@/components/ui/buttons';
+
 // --- Define the structure for a single program ---
 interface Program {
   id: number | string; // Allow string for ID if needed, e.g., from a CMS

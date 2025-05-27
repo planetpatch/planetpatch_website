@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { modernButtonBase,donateButtonStyles } from "@/components/ui/buttons"
 
+
 interface UpdatePost {
   id: string
   title: string
@@ -163,7 +164,7 @@ export default function Updates() {
                   {/* Excerpt */}
                   <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">{post.excerpt}</p>
 
-                  {/* Read More Link */}
+                  {/* Read More Link */
                   <Link
                 href={post.href}
                 target="_blank"

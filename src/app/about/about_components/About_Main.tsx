@@ -1,6 +1,19 @@
 // import Image from 'next/image'; // Import next/image (currently commented out by user)
 import { gemunuLibre } from "@/components/ui/fonts";
 import Link from "next/link";
+import { TeamMember, teamMembers,ProjectPost, projectPosts } from "@/app/lib/InfoArrays";
+
+// app/projects/page.tsx (or your actual path)
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+// Image and Link are no longer directly used in this file's JSX for the grid
+// import Image from "next/image";
+// import Link from "next/link";
+import { modernButtonBase, donateButtonStyles } from "@/components/ui/buttons";
+
+
+import ProjectsDisplay from "@/app/projects/ProjectsDisplay";
+import { getCategoryColor } from "@/app/projects/page";
 
 const About_Main = () => {
     return (
@@ -76,28 +89,25 @@ const About_Main = () => {
                     </div>
                 </section>
 
-                {/* Section 2: Who We Are (3-column, 2-row grid) */}
-                <section className="py-12 md:py-20 bg-gray-50 dark:bg-slate-900">
+  {/* Section 2: Who We Are (3-column, 2-row grid) */}
+  <section className="py-12 md:py-20 bg-gray-50 dark:bg-slate-900">
                     <div className="container mx-auto px-6 lg:px-8">
                         <h2 className={`text-3xl md:text-4xl font-bold text-green-600 dark:text-green-400 mb-10 md:mb-12 text-left ${gemunuLibre.className}`}>
                             Who We Are
                         </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                            {[...Array(6)].map((_, index) => ( // Placeholder for 6 team members
-                                <div key={index} className="bg-white dark:bg-slate-800 rounded-xl shadow-xl p-6 text-center flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+                            {teamMembers.map((member) => (
+                                <div key={member.id} className="bg-white dark:bg-slate-800 rounded-xl shadow-xl p-6 text-center flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
                                     <img
-                                        src='https://www.monstertreeservice.com/cms/thumbnails/24/1080x540/images/articles/MTS_OUW_FiveTypesofFastGrowingTrees_BlogPhoto_Jun23_20230531.jpg'
-                                        //src={`https://placehold.co/150x150/a2d9a1/333333?text=Team+Member+${index + 1}`}
-                                        alt={`Portrait of Team Member ${index + 1}`}
+                                        src={member.image}
+                                        alt={`Portrait of ${member.name}`}
                                         className="w-32 h-32 rounded-full mb-5 object-cover shadow-md"
                                     />
                                     <h4 className={`text-xl font-bold text-slate-800 dark:text-white mb-1 ${gemunuLibre.className}`}>
-                                        {/* Replace with actual name */}
-                                        Alex Johnson {index + 1}
+                                        {member.name}
                                     </h4>
                                     <p className="text-green-600 dark:text-green-400 text-sm">
-                                        {/* Replace with actual title */}
-                                        Lead Environmental Strategist
+                                        {member.title}
                                     </p>
                                 </div>
                             ))}
@@ -105,6 +115,13 @@ const About_Main = () => {
                     </div>
                 </section>
 
+                <ProjectsDisplay
+        posts={projectPosts}
+        getCategoryColorFunc={getCategoryColor}
+        fontClassName={gemunuLibre.className}
+        buttonBaseStyles={modernButtonBase}
+        buttonSpecificStyles={donateButtonStyles}
+      />
                 {/* Section 3: Current Projects (3-column, 1-row grid) */}
                 <section className="py-12 md:py-20 bg-white dark:bg-slate-800">
                     <div className="container mx-auto px-6 lg:px-8">

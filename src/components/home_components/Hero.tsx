@@ -73,16 +73,16 @@ const Hero = () => {
         {/* Bottom Section: CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
           <Link
-            href="/how-can-i-help" // Update with actual link
+            href="/donate" // Update with actual link
             className={`${heroButtonBase.trim()} ${gemunuLibre.className}  ${primaryHeroButtonStyles}`}
           >
-            START CRAFTING
+            DONATE
           </Link>
           <Link
-            href="/energy-tracker" // Update with actual link
+            href="/projects" // Update with actual link
             className={`${heroButtonBase.trim()} ${gemunuLibre.className}  ${secondaryHeroButtonStyles}`}
           >
-            ENERGY TRACKER
+            OUR PROJECTS
           </Link>
         </div>
       </div>

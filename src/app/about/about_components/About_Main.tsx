@@ -122,39 +122,6 @@ const About_Main = () => {
         buttonBaseStyles={modernButtonBase}
         buttonSpecificStyles={donateButtonStyles}
       />
-                {/* Section 3: Current Projects (3-column, 1-row grid) */}
-                <section className="py-12 md:py-20 bg-white dark:bg-slate-800">
-                    <div className="container mx-auto px-6 lg:px-8">
-                        <h2 className={`text-3xl md:text-4xl font-bold text-green-600 dark:text-green-400 mb-10 md:mb-12 text-left ${gemunuLibre.className}`}>
-                            Current Projects
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                            {[...Array(3)].map((_, index) => ( // Placeholder for 3 projects
-                                <div key={index} className="bg-white dark:bg-slate-800 rounded-xl shadow-xl overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
-                                    <img
-                                        src="https://www.monstertreeservice.com/cms/thumbnails/24/1080x540/images/articles/MTS_OUW_FiveTypesofFastGrowingTrees_BlogPhoto_Jun23_20230531.jpg"
-                                        // src={`https://placehold.co/400x225/69b069/FFFFFF?text=Project+${index + 1}`}
-                                        alt={`Visual for Project ${index + 1}`}
-                                        className="w-full h-52 object-cover" // Increased height slightly
-                                    />
-                                    <div className="p-6 flex flex-col flex-grow">
-                                        <h4 className={`text-2xl font-bold text-slate-800 dark:text-white mb-3 ${gemunuLibre.className}`}>
-                                            {/* Replace with actual project name */}
-                                            Project Evergreen {index + 1}
-                                        </h4>
-                                        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed flex-grow mb-4">
-                                            {/* Replace with actual project description */}
-                                            A brief description of this impactful project, focusing on its goals, methods, and expected outcomes for community and climate resilience. This project aims to...
-                                        </p>
-                                        <Link href={`/projects/project-${index + 1}`} className="mt-auto text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-semibold self-start transition-colors">
-                                            Learn More &rarr;
-                                        </Link>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
 
                 {/* Section 4: Contribute (Text Left, Image Right) */}
                 <section className="py-12 md:py-20 bg-gray-50 dark:bg-slate-900">

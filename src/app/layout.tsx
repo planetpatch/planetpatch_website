@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/Footer";
 
 
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <Navigation />
         {children}
+        <Footer/>
         <SpeedInsights />
       </body>
     </html>

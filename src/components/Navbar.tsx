@@ -4,17 +4,11 @@
 import React, { useState, useEffect } from 'react'; // Import useState and useEffect
 import Image from 'next/image';
 import Link from 'next/link';
-import { Gemunu_Libre } from 'next/font/google';
 import { donateButtonStyles, modernButtonBase, contactButtonStyles } from './ui/buttons';
 import { Icon } from "@iconify/react";
-
+import { gemunuLibre } from './ui/fonts';
 // FONT INITIALIZATION
-const gemunuLibre = Gemunu_Libre({
-  subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '800'],
-  variable: '--font-gemunu-libre',
-  display: 'swap',
-});
+
 
 // Define the structure for nav links
 interface NavLink {
@@ -97,9 +91,7 @@ const Navbar = () => {
           className="p-2 rounded-md text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
         >
           {isMobileMenuOpen ? (
-             <span className="text-2xl font-bold w-7 h-7 flex items-center justify-center text-red-500 bg-yellow-300 p-1"> {/* Added bright colors for debugging */}
-             X
-           </span>
+            <Icon icon="material-symbols:close-rounded" width="24" height="24" color="#209740" />
           ) : (
             <Icon icon="heroicons:bars-3-bottom-right-16-solid" width="16" height="16"  color="#209740"/>
           )}

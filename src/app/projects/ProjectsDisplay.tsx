@@ -7,7 +7,6 @@ import type { ProjectPost } from '../lib/InfoArrays'; // Import the type
 // Define the props interface
 interface ProjectsDisplayProps {
   posts: ProjectPost[];
-  getCategoryColorFunc: (category: ProjectPost["category"]) => string;
   fontClassName: string;
   buttonBaseStyles: string;
   buttonSpecificStyles: string;
@@ -15,7 +14,6 @@ interface ProjectsDisplayProps {
 
 const ProjectsDisplay: React.FC<ProjectsDisplayProps> = ({
   posts,
-  getCategoryColorFunc,
   fontClassName,
   buttonBaseStyles,
   buttonSpecificStyles,
@@ -40,12 +38,8 @@ const ProjectsDisplay: React.FC<ProjectsDisplayProps> = ({
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Example sizes prop
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  {/* Category Badge Overlay */}
-                  <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getCategoryColorFunc(post.category)}`}> {/* Use prop */}
-                      {post.category}
-                    </span>
-                  </div>
+       
+
                 </div>
 
                 <div className="p-6">

@@ -69,12 +69,13 @@ export default function Donate() {
 
   return (
     <>
-      <main className="max-w-2xl mx-auto p-8 md:p-10 text-white text-center border my-10 rounded-lg shadow-xl bg-gradient-to-tr from-green-400 to-lime-800">
+      <main className="max-w-2xl mx-auto p-8 md:p-10 text-white text-center border-3 border-dashed  border-green-800 my-10 rounded-lg shadow-xl 
+">
         <div className="mb-8">
-          <h1 className={`text-4xl md:text-5xl font-bold mb-3 ${gemunuLibre.className}`}>
+          <h1 className={`text-4xl md:text-5xl font-bold text-green-800 mb-3 ${gemunuLibre.className}`}>
             Support PlanetPatch
           </h1>
-          <h2 className="text-xl md:text-2xl text-purple-200">
+          <h2 className={`text-xl md:text-2xl text-green-800 ${gemunuLibre.className}`}>
             How much would you like to donate?
           </h2>
         </div>
@@ -87,10 +88,10 @@ export default function Donate() {
                 onClick={() => handlePresetClick(preset)}
                 className={`
                   p-3 rounded-md font-semibold text-lg transition-all duration-200 ease-in-out
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-600 focus:ring-white
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-600 focus:ring-green-800
                   ${activePresetUI === preset
-                    ? 'bg-white text-purple-700 scale-105 shadow-lg'
-                    : 'bg-purple-500 hover:bg-purple-400 text-white'
+                    ? 'bg-white text-green-700 scale-105 shadow-lg'
+                    : 'bg-green-700 hover:bg-green-400 border-green-800 text-white'
                   }
                 `}
               >
@@ -109,7 +110,7 @@ export default function Donate() {
               className="
                 p-3 rounded-md w-full max-w-xs mx-auto text-lg text-center 
                 text-black dark:text-black bg-gray-100 focus:bg-white 
-                focus:outline-none focus:ring-2 focus:ring-purple-500 border border-gray-300
+                focus:outline-none focus:ring-2 focus:ring-green-700 border border-gray-300
               "
             />
             {/* Show Confirm button if custom input has a valid value AND no preset is active */}
@@ -118,8 +119,8 @@ export default function Donate() {
                 onClick={handleConfirmCustomAmount}
                 className="
                   w-full max-w-xs mx-auto px-6 py-3 rounded-md font-semibold text-lg transition-colors duration-200 ease-in-out
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-600 focus:ring-white
-                  bg-green-500 text-white hover:bg-green-600
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-600 focus:ring-white
+                  bg-green-700 text-white hover:bg-white hover:border-3 hover:border-green-800 hover:text-green-800
                 "
               >
                 Confirm ${formattedCustomAmountForButton}
@@ -134,7 +135,7 @@ export default function Donate() {
             <CheckoutPage amount={committedAmount} />
           </Elements>
         ) : (
-          <div className="p-4 my-4 text-center bg-purple-400/50 rounded-md min-h-[100px] flex items-center justify-center">
+          <div className="p-4 my-4 text-center bg-green-700 rounded-md min-h-[100px] flex items-center justify-center">
             {/* Placeholder for when CheckoutPage is hidden */}
             <p className="font-semibold">
               {activePresetUI === null && customInputValue

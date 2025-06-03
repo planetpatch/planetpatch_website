@@ -1,10 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
-import Button from "./Button";
 import { modernButtonBase, donateButtonStyles,contactButtonStyles } from "@/components/ui/buttons";
 import { gemunuLibre } from "@/components/ui/fonts";
-import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export interface NavLink {

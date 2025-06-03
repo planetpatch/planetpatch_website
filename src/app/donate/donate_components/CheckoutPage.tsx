@@ -1,7 +1,5 @@
 "use client";
 
-// ... (other imports remain the same)
-import { useRouter } from "next/navigation"; // Not used in current snippet, but often present
 import React, { useEffect, useState } from "react";
 import {
   useStripe,

@@ -1,9 +1,7 @@
 import { JSX } from 'react'
-import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import { navLinks } from '../navbar';
 import { modernButtonBase, donateButtonStyles,contactButtonStyles } from "@/components/ui/buttons";
-import { gemunuLibre } from "@/components/ui/fonts";
 
 const Sidebar = ({
   isOpen,

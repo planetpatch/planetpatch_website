@@ -3,7 +3,6 @@ import Link from "next/link";
 import { teamMembers, projectPosts } from "@/app/lib/InfoArrays";
 import { modernButtonBase, donateButtonStyles } from "@/components/ui/buttons";
 import ProjectsDisplay from "@/app/projects/ProjectsDisplay";
-import { getCategoryColor } from "@/app/projects/page";
 
 const About_Main = () => {
     return (
@@ -107,7 +106,6 @@ const About_Main = () => {
 
                 <ProjectsDisplay
         posts={projectPosts}
-        getCategoryColorFunc={getCategoryColor}
         fontClassName={gemunuLibre.className}
         buttonBaseStyles={modernButtonBase}
         buttonSpecificStyles={donateButtonStyles}

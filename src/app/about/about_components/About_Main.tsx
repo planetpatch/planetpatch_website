@@ -1,17 +1,7 @@
-// import Image from 'next/image'; // Import next/image (currently commented out by user)
 import { gemunuLibre } from "@/components/ui/fonts";
 import Link from "next/link";
-import { TeamMember, teamMembers,ProjectPost, projectPosts } from "@/app/lib/InfoArrays";
-
-// app/projects/page.tsx (or your actual path)
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-// Image and Link are no longer directly used in this file's JSX for the grid
-// import Image from "next/image";
-// import Link from "next/link";
+import { teamMembers, projectPosts } from "@/app/lib/InfoArrays";
 import { modernButtonBase, donateButtonStyles } from "@/components/ui/buttons";
-
-
 import ProjectsDisplay from "@/app/projects/ProjectsDisplay";
 import { getCategoryColor } from "@/app/projects/page";
 

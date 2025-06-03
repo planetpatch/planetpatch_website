@@ -5,9 +5,6 @@ import CheckoutPage from "./donate_components/CheckoutPage";
 import convertToSubcurrency from "./donate_lib/convertToSubcurrency";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe, StripeElementsOptions } from "@stripe/stripe-js";
-
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { gemunuLibre } from "@/components/ui/fonts";
 
 if (process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY === undefined) {

@@ -1,15 +1,14 @@
 // components/Footer.tsx
 import Link from 'next/link';
 import { gemunuLibre } from './ui/fonts';
+import { Icon } from '@iconify/react/dist/iconify.js';
 // Placeholder for social icons - you can replace these with actual icon components (e.g., from react-icons or SVGs)
 // import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'; // Example using react-icons
 
-// If you don't want to install react-icons yet, you can use simple text placeholders:
-const FacebookPlaceholder = () => <span className="text-xl">FB</span>;
-// const TwitterPlaceholder = () => <span className="text-xl">T</span>;
-const InstagramPlaceholder = () => <span className="text-xl">Insta</span>;
-// const LinkedinPlaceholder = () => <span className="text-xl">L</span>;
-const BlueskyPlaceholder = () => <span className="text-xl">BlueSky</span>;
+const FacebookPlaceholder = () => <Icon icon="logos:facebook"  width="36" height="36" />
+const InstagramPlaceholder = () => <Icon icon="skill-icons:instagram" width="36" height="36" />
+const LinkedinPlaceholder = () => <Icon icon="skill-icons:linkedin" width="36" height="36" />
+const BlueskyPlaceholder = () => <Icon icon="logos:bluesky" width="36" height="32" />
 
 interface FooterLink {
   href: string;
@@ -19,18 +18,17 @@ interface FooterLink {
 const footerNavLinks: FooterLink[] = [
   { href: "/about", label: "ABOUT" },
     { href: "/resources", label: "RESOURCES" },
-    { href: "/updates", label: "UPDATES" },
-  { href: "/community", label: "COMMUNITY" },
+    { href: "/projects", label: "PROJECTS" },
+  { href: "/updates", label: "UPDATES" },
   { href: "/contact", label: "CONTACT" },
 ];
 
 // Example social links - update with your actual URLs
 const socialLinks = [
   { href: "https://www.facebook.com/planetpatch.dev/", icon: FacebookPlaceholder, label: "Facebook" },
-//   { href: "https://twitter.com", icon: TwitterPlaceholder, label: "Twitter" },
     { href: "https://www.instagram.com/planetpatch.dev/", icon: InstagramPlaceholder, label: "Instagram" },
     { href: "https://bsky.app/profile/planetpatch.bsky.social", icon: BlueskyPlaceholder, label: "BlueSky" },
-//   { href: "https://linkedin.com", icon: LinkedinPlaceholder, label: "LinkedIn" },
+  { href: "https://www.linkedin.com/company/planetpatch/", icon: LinkedinPlaceholder, label: "LinkedIn" },
 ];
 
 const Footer = () => {
@@ -52,6 +50,10 @@ const Footer = () => {
             ))}
           </ul>
         </nav>
+
+        <div className="flex justify-center items-center space-x-5 md:space-x-6 mb-8 md:mb-10">
+          
+        </div>
 
         {/* Middle section: Social Media Icons */}
         <div className="flex justify-center items-center space-x-5 md:space-x-6 mb-8 md:mb-10">

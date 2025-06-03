@@ -69,7 +69,7 @@ export default function Donate() {
 
   return (
     <>
-      <main className="max-w-2xl mx-auto p-8 md:p-10 text-white text-center border-3 border-dashed  border-green-800 my-10 rounded-lg shadow-xl 
+      <main className="max-w-2xl mx-auto p-8 md:p-10 text-white text-center border-3 border-dashed  dark:bg-slate-900 border-green-800 my-10 rounded-lg shadow-xl 
 ">
         <div className="mb-8">
           <h1 className={`text-4xl md:text-5xl font-bold text-green-800 mb-3 ${gemunuLibre.className}`}>

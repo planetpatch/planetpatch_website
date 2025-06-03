@@ -4,13 +4,16 @@ import Logo from "./Logo";
 import Button from "./Button";
 import { modernButtonBase, donateButtonStyles,contactButtonStyles } from "@/components/ui/buttons";
 import { gemunuLibre } from "@/components/ui/fonts";
+import Image from "next/image";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
-interface NavLink {
+export interface NavLink {
     href: string;
     label: string;
   }
   
-  const navLinks: NavLink[] = [
+export const navLinks: NavLink[] = [
+    { href: "/", label: "HOME" },
     { href: "/about", label: "ABOUT" },
     { href: "/resources", label: "RESOURCES" },
     { href: "/projects", label: "PROJECTS" },
@@ -18,14 +21,24 @@ interface NavLink {
   ];
 
 
-const Navbar = ({ toggle }: { toggle: () => void }) => {
+  const Navbar = ({ toggle, isOpen }: { toggle: () => void; isOpen: boolean }) => {
       
     return (
         <header
             className={`dark:bg-[#122112] flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 ${gemunuLibre.className} relative z-50`}
         >
-
-            
+           <Logo />
+            <button
+                type="button"
+                className="inline-flex items-center md:hidden"
+                onClick={toggle}
+            >
+{isOpen ? (
+                <Icon icon="material-symbols:close-rounded" width="36" height="36" color="#209740" /> // Or your preferred X icon
+             ) : (
+                <Icon icon="heroicons:bars-3-bottom-right-16-solid" width="36" height="36" color="#209740" />
+             )}
+            </button>
             <nav className="hidden md:flex items-center justify-end gap-x-4 lg:gap-x-6">
                 {navLinks.map((link) => (
                     <Link

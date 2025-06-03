@@ -1,6 +1,4 @@
 import { Suspense } from "react";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import PaymentSuccessClientDisplay from "./PaymentSuccessClientDisplay"; // Import the new client component
 
 // This is now a Server Component (no "use client" directive)
@@ -13,7 +11,6 @@ export default function PaymentSuccessPage() {
 
   return (
     <>
-      <Navbar />
       <Suspense 
         fallback={
           // This fallback will be rendered on the server and shown on the client
@@ -27,7 +24,6 @@ export default function PaymentSuccessPage() {
       >
         <PaymentSuccessClientDisplay />
       </Suspense>
-      <Footer />
     </>
   );
 }

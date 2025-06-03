@@ -1,6 +1,4 @@
-// app/projects/page.tsx (or your actual path)
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+
 import { gemunuLibre } from "@/components/ui/fonts";
 // Image and Link are no longer directly used in this file's JSX for the grid
 // import Image from "next/image";
@@ -29,7 +27,6 @@ export const getCategoryColor = (category: ProjectPost["category"]) => {
 export default function Projects() {
   return (
     <>
-      <Navbar />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-green-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
@@ -56,7 +53,7 @@ export default function Projects() {
         buttonSpecificStyles={donateButtonStyles}
       />
 
-      <Footer />
+
     </>
   );
 }

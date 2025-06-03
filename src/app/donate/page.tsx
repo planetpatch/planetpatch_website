@@ -72,7 +72,6 @@ export default function Donate() {
 
   return (
     <>
-      <Navbar />
       <main className="max-w-2xl mx-auto p-8 md:p-10 text-white text-center border my-10 rounded-lg shadow-xl bg-gradient-to-tr from-green-400 to-lime-800">
         <div className="mb-8">
           <h1 className={`text-4xl md:text-5xl font-bold mb-3 ${gemunuLibre.className}`}>
@@ -149,7 +148,6 @@ export default function Donate() {
           </div>
         )}
       </main>
-      <Footer />
     </>
   );
 }

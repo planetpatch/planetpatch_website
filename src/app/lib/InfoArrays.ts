@@ -78,3 +78,32 @@ export interface ProjectPost {
   ]
 
   
+
+
+export type Project = {
+  createdAt: Date | undefined ;
+  updatedAt: Date | null | undefined;
+  ProjectID: number | undefined;
+  Status: string | undefined;
+}
+
+
+
+export type ClientType = {
+    createdAt: Date  | undefined ;
+    updatedAt: Date  | null | undefined;
+    AgentID: number | undefined;
+    FirstName: string;
+    LastName: string;
+    Email: string;
+    PhoneNumber: string | null;
+    ClientID: number | undefined;
+    DateOfBirth: string;
+    CompleteAddressLine: string;
+    Status: string | undefined;
+    LastInteractionDate: Date | null | undefined;
+    FollowUpDate: string | null | undefined;
+    LastFourSSN: string | null | undefined;
+    LastViewedDate: Date  | null | undefined;
+
+};

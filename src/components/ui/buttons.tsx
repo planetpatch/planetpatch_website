@@ -1,4 +1,11 @@
 // --- Button Styles ---
+
+// Base classes for modern minimalistic buttons
+// Includes padding, font, rounding, custom green glow, transform for animation, transition properties,
+// hover effects (scale, glow enhancement), and focus-visible states for accessibility.
+// Green-400 RGB: (52, 211, 153)
+
+
 export const modernButtonBase = `
   px-5 py-2 text-xl font-bold rounded-md 
   shadow-[0_0_8px_rgba(52,211,153,0.3)] 
@@ -13,3 +20,16 @@ export const donateButtonStyles = `
   focus-visible:ring-green-500
 `;
 // --- End Button Styles ---
+
+
+
+
+// Specific styles for the Donate button (from your modifications)
+
+
+// Specific styles for the Contact button (from your modifications)
+export const contactButtonStyles = 
+`bg-white text-green-600 
+border border-green-600
+hover:border-green-600
+focus-visible:ring-green-500`;

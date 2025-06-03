@@ -1,11 +1,8 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { gemunuLibre } from "@/components/ui/fonts";
 
 export default function Contact() {
   return (
     <>
-      <Navbar />
       <section className="bg-gradient-to-b from-green-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
               <div className="container mx-auto px-6">
                 <div className="text-center">
@@ -37,7 +34,6 @@ export default function Contact() {
 
           </div>
           </section>
-      <Footer />
     </>
   );
 }

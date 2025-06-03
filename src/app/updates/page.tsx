@@ -1,5 +1,4 @@
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
+
 import { gemunuLibre } from "@/components/ui/fonts"
 import Image from "next/image"
 import Link from "next/link"
@@ -100,7 +99,7 @@ const getCategoryColor = (category: UpdatePost["category"]) => {
 export default function Updates() {
   return (
     <>
-      <Navbar />
+
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-green-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
@@ -212,7 +211,7 @@ export default function Updates() {
         </div>
       </section>
 
-      <Footer />
+
     </>
   )
 }

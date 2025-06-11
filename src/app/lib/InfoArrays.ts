@@ -22,10 +22,10 @@ export interface TeamMember {
     {
       id: "3",
       name: "Pranab Adhikari",
-        title: "Co-Founder / Innovation Director",
+        title: "Co-Founder / Technology Director",
       image: "/Pranab_Adhikari.jpeg"
       },
-    {
+          {
       id: "4",
       name: "Amita Gaire",
       title: "Secretary",
@@ -33,6 +33,12 @@ export interface TeamMember {
     },
     {
       id: "5",
+      name: "Sahaj Dahal",
+      title: "Co-Founder / Innovation Director",
+      image: "/Sahaj_Dahal.jpeg"
+    },
+    {
+      id: "6",
       name: "Parwat Regmi",
       title: "Treasurer",
       image: "/Parwat_Regmi.jpeg"

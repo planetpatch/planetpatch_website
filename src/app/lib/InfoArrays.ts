@@ -22,7 +22,7 @@ export interface TeamMember {
     {
       id: "3",
       name: "Pranab Adhikari",
-        title: "Co-Founder / Innovation and Technology Director",
+        title: "Co-Founder / Technology Director",
       image: "/Pranab_Adhikari.jpeg"
       },
           {
@@ -34,7 +34,7 @@ export interface TeamMember {
     {
       id: "5",
       name: "Sahaj Dahal",
-      title: "Technical Director",
+      title: "Co-Founder / Innovation Director",
       image: "/Sahaj_Dahal.jpeg"
     },
     {

@@ -33,16 +33,22 @@ const Hero = () => {
         min-h-[calc(100vh-7rem)] md:min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-9rem)]
         flex flex-col justify-center items-center
         py-16 md:py-24 px-6
-        bg-gradient-to-b from-white to-sky-700
+        /* Changed 'from-white' to 'from-sky-200' for a smoother blue fade in light mode */
+        bg-gradient-to-b from-sky-200 to-sky-700
         dark:bg-gradient-to-b dark:from-slate-900 dark:to-sky-900
         ${gemunuLibre.variable} font-sans
       `}
     >
       {/* Container for the pure CSS stars using the imported styles */}
       <div className="absolute top-0 left-0 w-full h-full">
+        {/* Existing star layers */}
         <div className={styles.stars1}></div>
         <div className={styles.stars2}></div>
         <div className={styles.stars3}></div>
+        {/* Additional star layers for more density */}
+        <div className={styles.stars4}></div>
+        <div className={styles.stars5}></div>
+        <div className={styles.stars6}></div>
       </div>
 
       {/* Main content, needs 'relative' and 'z-10' to be on top of the stars */}
@@ -69,7 +75,7 @@ const Hero = () => {
             </h1>
           </div>
 
-          <p className="mt-4 text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg md:text-xl text-slate-800 dark:text-slate-200 max-w-3xl mx-auto">
             Drive everyday people to take small, actionable steps to build climate resilience through engaging software
           </p>
         </div>

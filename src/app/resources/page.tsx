@@ -6,22 +6,24 @@ import { mgePrograms,alliantPrograms,govtPrograms,floodingInfo } from "./resourc
 export default function Updates() {
   return (
     <>
-      {/* Hero Section - UPDATED with a background image */}
+      {/* Hero Section - UPDATED with a new background image and overlay */}
       <section 
         className="relative py-20 md:py-28 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
+        // NEW IMAGE: A picture of a solar panel farm.
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
       >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-slate-800 bg-opacity-60"></div>
+        {/* UPDATED OVERLAY: A semi-transparent dark green for better theme alignment. */}
+        <div className="absolute inset-0 bg-green-900 bg-opacity-50"></div>
         
         <div className="relative z-10 container mx-auto px-6">
           <div className="text-center">
             <h1
-              className={`text-4xl md:text-6xl font-bold text-white mb-6 ${gemunuLibre.className}`}
+              // Changed text size to be larger (text-6xl, md:text-7xl, lg:text-8xl)
+              className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 ${gemunuLibre.className}`}
             >
               Resources
             </h1>
-            <p className="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-100 max-w-3xl mx-auto leading-relaxed">
               Use these resources to start making a difference today!
             </p>
           </div>
@@ -44,7 +46,7 @@ export default function Updates() {
               sectionTitle="Madison Gas and Electric (MG&E) Renewable Energy Offerings" 
             />
 
-            {/* UPDATED: Added a visual separator */}
+            {/* Visual separator */}
             <div className="my-12 md:my-16 border-t border-gray-200 dark:border-gray-700"></div>
 
             {/* Section for Alliant */}
@@ -53,7 +55,7 @@ export default function Updates() {
               sectionTitle="Alliant Energy Renewable Energy Offerings" 
             />
             
-            {/* UPDATED: Added a visual separator */}
+            {/* Visual separator */}
             <div className="my-12 md:my-16 border-t border-gray-200 dark:border-gray-700"></div>
 
             {/* Section for Government Incentives */}
@@ -63,7 +65,7 @@ export default function Updates() {
             />
           </div>
     
-          {/* UPDATED: Added a visual separator */}
+          {/* Visual separator */}
           <div className="my-12 md:my-16 border-t border-gray-200 dark:border-gray-700"></div>
 
           <div id="resilience">
@@ -76,8 +78,6 @@ export default function Updates() {
           
         </div>
       </section>
-
-      {/* REMOVED: The "Stay Updated" newsletter signup section has been deleted. */}
     </>
   )
 }

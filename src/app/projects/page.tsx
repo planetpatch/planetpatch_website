@@ -1,4 +1,3 @@
-
 import { gemunuLibre } from "@/components/ui/fonts";
 // Image and Link are no longer directly used in this file's JSX for the grid
 // import Image from "next/image";
@@ -27,20 +26,24 @@ import ProjectsDisplay from "./ProjectsDisplay"; // Adjust path to where you sav
 export default function Projects() {
   return (
     <>
-
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-green-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center">
-            <h1
-              className={`text-4xl md:text-6xl font-bold text-slate-800 dark:text-white mb-6 ${gemunuLibre.className}`}
-            >
-              Projects
-            </h1>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Stay informed about our latest projects!
-            </p>
-          </div>
+      {/* Updated to match the green background image and overlay from the About page */}
+      <section
+        className="relative py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
+      >
+        {/* Green overlay with opacity */}
+        <div className="absolute inset-0 bg-green-900 bg-opacity-50"></div>
+        <div className="relative z-10 container mx-auto px-6 text-center">
+          <h1
+            // Increased margin-bottom to create more separation
+            className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 ${gemunuLibre.className}`}
+          >
+            Projects
+          </h1>
+          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed">
+            Stay informed about our latest projects!
+          </p>
         </div>
       </section>
 
@@ -51,8 +54,6 @@ export default function Projects() {
         buttonBaseStyles={modernButtonBase}
         buttonSpecificStyles={donateButtonStyles}
       />
-
-
     </>
   );
 }

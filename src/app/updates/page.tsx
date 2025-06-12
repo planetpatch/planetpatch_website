@@ -1,4 +1,3 @@
-
 import { gemunuLibre } from "@/components/ui/fonts"
 import Image from "next/image"
 import Link from "next/link"
@@ -99,26 +98,31 @@ const getCategoryColor = (category: UpdatePost["category"]) => {
 export default function Updates() {
   return (
     <>
-
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-green-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
-        <div className="container mx-auto px-6">
+      {/* Hero Section - UPDATED with a new background image and overlay */}
+      <section 
+        className="relative py-20 md:py-28 bg-cover bg-center"
+        // NEW IMAGE: A picture of a solar panel farm.
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
+      >
+        {/* UPDATED OVERLAY: A semi-transparent dark green for better theme alignment. */}
+        <div className="absolute inset-0 bg-green-900 bg-opacity-50"></div>
+        
+        <div className="relative z-10 container mx-auto px-6">
           <div className="text-center">
             <h1
-              className={`text-4xl md:text-6xl font-bold text-slate-800 dark:text-white mb-6 ${gemunuLibre.className}`}
+              className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 ${gemunuLibre.className}`}
             >
               Latest Updates
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed">
               Stay informed about our latest initiatives, research findings, community partnerships, and climate
               resilience developments.
             </p>
           </div>
         </div>
       </section>
+      
 
-      {/* Updates Grid */}
       <section className="py-16 md:py-20 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -164,13 +168,13 @@ export default function Updates() {
 
                   {/* Read More Link */}
                   <Link
-                href={post.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${modernButtonBase.trim()} ${donateButtonStyles.trim()} mt-auto self-start text-center w-full sm:w-auto`}
-              >
-                Read More
-              </Link>
+                    href={post.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${modernButtonBase.trim()} ${donateButtonStyles.trim()} mt-auto self-start text-center w-full sm:w-auto`}
+                  >
+                    Read More
+                  </Link>
                   {/* <button className="text-green-600 dark:text-green-400 font-semibold hover:text-green-700 dark:hover:text-green-300 transition-colors">
                     Read More →
                   </button> */}

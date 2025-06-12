@@ -79,7 +79,7 @@ const Hero = () => {
             Drive everyday people to take small, actionable steps to build climate resilience through engaging software
           </p>
         </div>
-        <div className="mt-6 px-6 py-4 rounded-xl bg-white/80 dark:bg-slate-900/70 backdrop-blur-sm shadow-md flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 mt-6">
   <Link
     href="/donate"
     className={`${heroButtonBase.trim()} ${gemunuLibre.className} ${primaryHeroButtonStyles}`}
@@ -93,6 +93,7 @@ const Hero = () => {
     OUR PROJECTS
   </Link>
 </div>
+
       </div>
     </section>
   );

@@ -184,16 +184,16 @@ export default function Updates() {
           </div>
 
           {/* Load More Button */}
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button className="px-8 py-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors duration-200 shadow-md hover:shadow-lg">
               Load More Updates
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-green-50 dark:bg-slate-800">
+      {/* <section className="py-16 bg-green-50 dark:bg-slate-800">
         <div className="container mx-auto px-6 text-center">
           <h2 className={`text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4 ${gemunuLibre.className}`}>
             Stay Updated
@@ -213,7 +213,7 @@ export default function Updates() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
     </>

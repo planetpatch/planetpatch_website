@@ -23,15 +23,28 @@ const About_Main = () => {
                     </div>
                 </section>
 
-                {/* Section 1: Origins & Direction - UPDATED with new background image */}
+                {/* Section 1: Origins & Direction - UPDATED with new background image and subtle vine texture */}
                 <section 
                     className="py-20 md:py-28 bg-cover bg-center relative"
                     style={{ backgroundImage: "url('https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
                 >
-                    {/* UPDATED: Overlay changed from black to a light, semi-transparent white */}
-                    <div className="absolute inset-0 bg-white bg-opacity-80 dark:bg-slate-800 dark:bg-opacity-80"></div>
+                    {/* Updated: Subtle vine texture layer - positioned behind the main overlay but in front of the background image */}
+                    <div
+                        className="absolute inset-0 z-0" // z-0 ensures it's behind the white/dark overlay
+                        style={{
+                            backgroundImage: "url('https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')", // Vine image URL
+                            backgroundSize: "cover", // Cover the entire section
+                            backgroundRepeat: "no-repeat", // Don't repeat the image
+                            backgroundPosition: "center",
+                            opacity: 0.25, // Increased opacity to make it more noticeable
+                        }}
+                    ></div>
+
+                    {/* Existing: Overlay changed from black to a light, semi-transparent white (now with z-10) */}
+                    <div className="absolute inset-0 bg-white bg-opacity-80 dark:bg-slate-800 dark:bg-opacity-80 z-10"></div>
                     
-                    <div className="container mx-auto px-6 lg:px-8 relative z-10 text-slate-800 dark:text-slate-100 text-center">
+                    {/* Main content, now needs z-20 to be on top of both overlays */}
+                    <div className="container mx-auto px-6 lg:px-8 relative z-20 text-slate-800 dark:text-slate-100 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className={`text-4xl md:text-5xl font-bold text-green-700 dark:text-green-400 mb-6 ${gemunuLibre.className}`}>
                                 Origins & Direction
@@ -86,8 +99,8 @@ const About_Main = () => {
                     </div>
                 </section>
 
-             {/* Section 2: Who We Are */}
-             <section className="py-12 md:py-20 bg-gray-50 dark:bg-slate-900">
+               {/* Section 2: Who We Are */}
+               <section className="py-12 md:py-20 bg-gray-50 dark:bg-slate-900">
                     <div className="container mx-auto px-6 lg:px-8">
                         <h2 className={`text-3xl md:text-4xl font-bold text-green-600 dark:text-green-400 mb-10 md:mb-12 text-left ${gemunuLibre.className}`}>
                             Who We Are
@@ -112,19 +125,6 @@ const About_Main = () => {
                     </div>
                 </section>
                 
-                {/* Projects Section Title */}
-                <div className="container mx-auto px-6 lg:px-8 pt-16 md:pt-20">
-                    <h2 className={`text-3xl md:text-4xl font-bold text-green-600 dark:text-green-400 mb-10 md:mb-12 text-left ${gemunuLibre.className}`}>
-                        Our Projects
-                    </h2>
-                </div>
-                <ProjectsDisplay
-                    posts={projectPosts}
-                    fontClassName={gemunuLibre.className}
-                    buttonBaseStyles={modernButtonBase}
-                    buttonSpecificStyles={donateButtonStyles}
-                />
-
                 {/* Section 4: Contribute - UPDATED with reduced size */}
                 <section className="py-8 md:py-16 bg-gray-50 dark:bg-slate-900">
                     <div className="container mx-auto px-6 lg:px-8">

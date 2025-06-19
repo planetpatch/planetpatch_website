@@ -4,9 +4,9 @@ import { teamMembers } from "@/app/lib/InfoArrays";
 import { modernButtonBase, donateButtonStyles } from "@/components/ui/buttons";
 
 const About_Main = () => {
-  // NEW: Animated growing vine over a solar panel grid
+  // NEW: Corrected leaf animation loop
   const themedAnimatedBg =
-    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3C!-- Background --%3E%3Crect width='1200' height='600' fill='%230b121c'/%3E%3C!-- Solar Panel Grid --%3E%3Cdefs%3E%3Cpattern id='grid' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 80 0 L 0 0 0 80' fill='none' stroke='%231c3a3e' stroke-width='1'/%3E%3C/pattern%3E%3Cpath id='leaf' d='M0,0 C-5,5 -5,15 0,20 C5,15 5,5 0,0 Z' fill='%2366bb6a'/%3E%3C/defs%3E%3Crect width='1200' height='600' fill='url(%23grid)'/%3E%3C!-- Animated Vine --%3E%3Cpath id='vinePath' d='M-100,300 Q150,50 400,300 T900,300 T1300,300' stroke='%239ccc65' stroke-width='4' fill='none' style='stroke-dasharray: 1800; stroke-dashoffset: 1800;'%3E%3Canimate id='vineAnim' attributeName='stroke-dashoffset' from='1800' to='0' dur='20s' repeatCount='indefinite'/%3E%3C/path%3E%3C!-- Sprouting Leaves --%3E%3Cg opacity='0'%3E%3Cuse href='%23leaf' x='220' y='140' transform='rotate(45 220 140)'/%3E%3Cuse href='%23leaf' x='400' y='300' transform='rotate(-30 400 300)'/%3E%3Cuse href='%23leaf' x='580' y='460' transform='rotate(120 580 460)'/%3E%3Cuse href='%23leaf' x='750' y='300' transform='rotate(60 750 300)'/%3E%3Cuse href='%23leaf' x='920' y='140' transform='rotate(-50 920 140)'/%3E%3Cuse href='%23leaf' x='1100' y='300' transform='rotate(30 1100 300)'/%3E%3Canimate attributeName='opacity' from='0' to='1' dur='1s' begin='vineAnim.begin %2B 3s' fill='freeze'/%3E%3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='vineAnim.begin %2B 19s' fill='freeze'/%3E%3C/g%3E%3C/svg%3E\")";
+    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Cdefs%3E%3Cstyle%3E.leaf%7Bfill:%2366bb6a%7D.vine%7Bstroke:%2316a34a%7D@media(prefers-color-scheme:dark)%7B.leaf%7Bfill:%2386efac%7D.vine%7Bstroke:%239ccc65%7D%7D%3C/style%3E%3Cpath id='leaf' class='leaf' d='M0,0 C-5,5 -5,15 0,20 C5,15 5,5 0,0 Z'/%3E%3C/defs%3E%3C!-- Animated Vine --%3E%3Cpath id='vinePath' class='vine' d='M-100,300 Q150,50 400,300 T900,300 T1300,300' stroke-width='4' fill='none' style='stroke-dasharray: 1800; stroke-dashoffset: 1800;'%3E%3Canimate id='vineAnim' attributeName='stroke-dashoffset' from='1800' to='0' dur='20s' repeatCount='indefinite'/%3E%3C/path%3E%3C!-- Sprouting Leaves --%3E%3Cg opacity='0'%3E%3Cuse href='%23leaf' x='220' y='140' transform='rotate(45 220 140)'/%3E%3Cuse href='%23leaf' x='400' y='300' transform='rotate(-30 400 300)'/%3E%3Cuse href='%23leaf' x='580' y='460' transform='rotate(120 580 460)'/%3E%3Cuse href='%23leaf' x='750' y='300' transform='rotate(60 750 300)'/%3E%3Cuse href='%23leaf' x='920' y='140' transform='rotate(-50 920 140)'/%3E%3Cuse href='%23leaf' x='1100' y='300' transform='rotate(30 1100 300)'/%3E%3Canimate attributeName='opacity' dur='20s' repeatCount='indefinite' keyTimes='0;0.15;0.2;0.95;1' values='0;0;1;1;0' begin='vineAnim.begin'/%3E%3C/g%3E%3C/svg%3E\")";
 
   return (
     <>
@@ -31,8 +31,8 @@ const About_Main = () => {
 
         {/* Origins & Direction - NEW Themed Animated Background */}
         <section
-          className="relative py-20 md:py-28"
-          style={{ backgroundImage: themedAnimatedBg, backgroundSize: 'cover' }}
+          className="relative py-20 md:py-28 bg-gray-50 dark:bg-slate-900"
+          style={{ backgroundImage: themedAnimatedBg, backgroundSize: "cover" }}
         >
           <div className="relative z-10 container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto bg-white/95 dark:bg-slate-800/95 rounded-2xl p-8 md:p-12 shadow-2xl">

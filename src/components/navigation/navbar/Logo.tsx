@@ -36,7 +36,7 @@ const Logo = () => {
   return (
     <>
       <Link href="/" style={{ display: showButton ? "none" : "block" }}>
-          <Image src="/home_assets/hero_image.png" alt="PlanetPatch Logo"
+          <Image src="/planetpatch_logo_transparent.png" alt="PlanetPatch Logo"
           width={width < 1024 ? "50" : "50"}
           height={width < 1024 ? "45" : "74"}
           className="relative"

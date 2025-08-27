@@ -37,12 +37,12 @@ const About_Main = () => {
 
                                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                                     The founding principle of PlanetPatch is to empower individuals to take collective climate action.
-                                    That’s not someone else: <span className='font-bold text-green-700 text-xl'>That’s me. That’s you. That’s us!</span>
+                                    That&apos;s not someone else: <span className='font-bold text-green-700 text-xl'>That&apos;s me. That&apos;s you. That&apos;s us!</span>
                                 </p>
                                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                                     There are millions of people who feel climate change is important to address but feel like the task is daunting
-                                    and they don’t know where to put their efforts. We felt the same way.
-                                    That’s why we founded PlanetPatch - we want to build a movement where you and your community have access to the information, the tools
+                                    and they don&apos;t know where to put their efforts. We felt the same way.
+                                    That&apos;s why we founded PlanetPatch - we want to build a movement where you and your community have access to the information, the tools
                                     and clear actionable steps to be the force behind real climate solutions.
                                 </p>
 
@@ -71,7 +71,9 @@ const About_Main = () => {
                                     </ul>
                                 
                                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                                    We hope to expand by building neighborhood resiliency networks, define and craft programs that pool our collective energy, time, and resources together to buy climate resilient technologies for the resiliency networks, and support companies and large organizations who want to invest in climate resilient infrastructure and decarbonization.
+                                    We hope to expand by building neighborhood resiliency networks, define and craft programs that pool our collective energy, time,
+                                    and resources together to buy climate resilient technologies for the resiliency networks, and support companies and large
+                                    organizations who want to invest in climate resilient infrastructure and decarbonization.
                                 </p>
                             </div>
                         </div>

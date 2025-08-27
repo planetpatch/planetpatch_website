@@ -2,13 +2,14 @@
 import Link from 'next/link';
 import { gemunuLibre } from './ui/fonts';
 import { Icon } from '@iconify/react/dist/iconify.js';
-// Placeholder for social icons - you can replace these with actual icon components (e.g., from react-icons or SVGs)
-// import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'; // Example using react-icons
 
+// Placeholder for social icons - you can replace these with actual icon components (e.g., from react-icons or SVGs)
 const FacebookPlaceholder = () => <Icon icon="logos:facebook"  width="36" height="36" />
 const InstagramPlaceholder = () => <Icon icon="skill-icons:instagram" width="36" height="36" />
 const LinkedinPlaceholder = () => <Icon icon="skill-icons:linkedin" width="36" height="36" />
 const BlueskyPlaceholder = () => <Icon icon="logos:bluesky" width="36" height="32" />
+// New: X (Twitter) icon placeholder
+const XPlaceholder = () => <Icon icon="fa6-brands:x-twitter" width="36" height="36" /> // Using a commonly available X icon
 
 interface FooterLink {
   href: string;
@@ -29,6 +30,8 @@ const socialLinks = [
     { href: "https://www.instagram.com/planetpatch.dev/", icon: InstagramPlaceholder, label: "Instagram" },
     { href: "https://bsky.app/profile/planetpatch.bsky.social", icon: BlueskyPlaceholder, label: "BlueSky" },
   { href: "https://www.linkedin.com/company/planetpatch/", icon: LinkedinPlaceholder, label: "LinkedIn" },
+  // New: X (Twitter) link
+  { href: "https://x.com/PlanetPatchDev", icon: XPlaceholder, label: "X (Twitter)" },
 ];
 
 const Footer = () => {
@@ -66,8 +69,7 @@ const Footer = () => {
               aria-label={social.label}
               className="text-slate-500 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-150"
             >
-                  {/* <social.icon className="h-5 w-5 md:h-6 md:w-6" /> */}
-                  <social.icon/>
+                <social.icon/>
             </a>
           ))}
         </div>

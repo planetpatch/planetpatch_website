@@ -36,19 +36,25 @@ const Logo = () => {
   return (
     <>
       <Link href="/" style={{ display: showButton ? "none" : "block" }}>
-          <Image src="/planetpatch_logo_transparent.png" alt="PlanetPatch Logo"
-          width={width < 1024 ? "50" : "50"}
-          height={width < 1024 ? "45" : "74"}
-          className="relative"
-          priority />
+        {/* Standard Logo (visible in light mode) */}
+        <Image 
+          src="/green_logo.png" 
+          alt="PlanetPatch Logo"
+          width={width < 1024 ? "50" : "75"}
+          height={width < 1024 ? "45" : "150"}
+          className="relative block dark:hidden"
+          priority 
+        />
         
-        {/* <Image
-          src="/images/logo.png"
-          alt="Logo"
-          width={width < 1024 ? "150" : "250"}
-          height={width < 1024 ? "45" : "74"}
-          className="relative"
-        /> */}
+        {/* White Logo (visible in dark mode) */}
+        <Image 
+          src="/white_logo.png" 
+          alt="PlanetPatch Logo"
+          width={width < 1024 ? "50" : "75"}
+          height={width < 1024 ? "45" : "150"}
+          className="relative hidden dark:block" 
+          priority 
+        />
       </Link>
       <div
         style={{

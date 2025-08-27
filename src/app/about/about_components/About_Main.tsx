@@ -19,8 +19,8 @@ const About_Main = () => {
               "url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
           }}
         >
-          <div className="absolute inset-0 bg-green-900 bg-opacity-50"></div>
-          <div className="relative z-10 container mx-auto px-6 text-center">
+          <div className="absolute inset-0  bg-opacity-50"></div>
+          <div className="relative z-10 container mx-auto px-6 py-10 text-center bg-green-900/70 rounded-lg">
             <h1
               className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white ${gemunuLibre.className}`}
             >

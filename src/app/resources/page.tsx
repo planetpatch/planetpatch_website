@@ -13,9 +13,9 @@ export default function Updates() {
         style={{ backgroundImage: "url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
       >
         {/* UPDATED OVERLAY: A semi-transparent dark green for better theme alignment. */}
-        <div className="absolute inset-0 bg-green-900 bg-opacity-50"></div>
+        <div className="absolute inset-0  bg-opacity-50"></div>
         
-        <div className="relative z-10 container mx-auto px-6">
+        <div className="relative z-10 container mx-auto px-6 py-10 text-center bg-green-900/70 rounded-lg">
           <div className="text-center">
             <h1
               // Changed text size to be larger (text-6xl, md:text-7xl, lg:text-8xl)

@@ -36,8 +36,8 @@ export default function Projects() {
         }}
       >
         {/* Green overlay with opacity */}
-        <div className="absolute inset-0 bg-green-900 bg-opacity-50"></div>
-        <div className="relative z-10 container mx-auto px-6 text-center">
+        <div className="absolute inset-0 bg-opacity-50"></div>
+        <div className="relative z-10 container mx-auto px-6 text-center bg-opacity-10 bg-green-900/70 rounded-lg">
           <h1
             // Increased margin-bottom to create more separation
             className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 ${gemunuLibre.className}`}

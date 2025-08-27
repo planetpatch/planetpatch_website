@@ -75,8 +75,8 @@ const Hero = () => {
             </h1>
           </div>
 
-          <p className="mt-4 text-lg md:text-xl text-slate-800 dark:text-slate-200 max-w-3xl mx-auto">
-            Drive everyday people to take small, actionable steps to build climate resilience through engaging software
+          <p className="mt-4 text-lg md:text-xl text-slate-100 dark:text-slate-200 max-w-3xl mx-auto">
+            Enabling everyday people to take small, actionable steps to build community climate resilience
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 mt-6">

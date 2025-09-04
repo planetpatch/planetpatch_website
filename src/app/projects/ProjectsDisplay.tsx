@@ -53,8 +53,6 @@ const ProjectsDisplay: React.FC<ProjectsDisplayProps> = ({
               {/* 3. Position the button */}
               <Link
                 href={post.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 // Use absolute positioning relative to the article
                 className={`${buttonBaseStyles.trim()} ${buttonSpecificStyles.trim()} absolute bottom-6 left-6 text-center`}
               >

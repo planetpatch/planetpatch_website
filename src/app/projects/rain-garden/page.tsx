@@ -1,15 +1,20 @@
 import Image from 'next/image';
+import StarsBackground from '@/components/ui/StarsBackground';
+
 
 export default function RainGarden() {
     return (
         // Set background colors for light and dark modes
-        <main className="bg-white dark:bg-gray-900">
-            <article className="container mx-auto px-4 py-8 max-w-2xl">
+         <main className="relative overflow-hidden bg-gradient-to-b from-sky-500 to-slate-900 dark:bg-gradient-to-b dark:from-slate-900 dark:to-sky-900 min-h-screen">
+            <StarsBackground />
+              <article className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 
+        max-w-3xl my-16 bg-slate-900/30 dark:bg-slate-900/30 
+ rounded-lg shadow-xl backdrop-blur-sm border border-white/10">
                 {/* Image at the top */}
                 <div className="mb-8">
                     <Image
                         src="/rain-garden.jpg" 
-                        alt="Energy Tracker Blog Header"
+                        alt="Rain Garden Blog Header"
                         width={800}
                         height={400}
                         layout="responsive"

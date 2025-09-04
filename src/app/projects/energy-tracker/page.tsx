@@ -1,10 +1,14 @@
 import Image from 'next/image';
+import StarsBackground from '@/components/ui/StarsBackground';
 
-export default function Page() {
+export default function EnergyTracker() {
     return (
         // Set background colors for light and dark modes
-        <main className="bg-white dark:bg-gray-900">
-            <article className="container mx-auto px-4 py-8 max-w-2xl">
+         <main className="relative overflow-hidden bg-gradient-to-b from-sky-500 to-slate-900 dark:bg-gradient-to-b dark:from-slate-900 dark:to-sky-900 min-h-screen">
+           <StarsBackground />
+        <article className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 
+        max-w-3xl my-16 bg-slate-900/30 dark:bg-slate-900/30 
+ rounded-lg shadow-xl backdrop-blur-sm border border-white/10">
                 {/* Image at the top */}
                 <div className="mb-8">
                     <Image
@@ -18,33 +22,31 @@ export default function Page() {
                 </div>
 
                 {/* H1 with dark mode text color */}
-                <h1 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-4 leading-tight">
-                    Energy Tracker
-                </h1>
+                 <h1 className="text-4xl font-extrabold text-white mb-4 leading-tight">
+          Energy Tracker
+        </h1>
+
 
                 {/* H2 with dark mode text color */}
-                <h2 className="text-xl text-gray-700 dark:text-gray-300 mb-6 font-semibold">
-                    The Energy Tracker is created to show you exactly how much of your electricity is renewable vs. non-renewable.
-                </h2>
+             <h2 className="text-xl text-slate-200 mb-6 font-semibold">
+          The Energy Tracker is created to show you exactly how much of your electricity is renewable vs. non-renewable.
+        </h2>
 
-                {/* H3 with dark mode text color and highlighted spans */}
-                <h3 className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                    With that information, you can Take Action by ordering a <span className="font-bold text-green-600 dark:text-green-400">FREE</span> Focus on Energy box to make your home
-                    more energy efficient. You can also comment on the <span className="font-bold text-blue-600 dark:text-blue-400">Public Service Commission</span> docket influencing Dane County&apos;s electric
-                    future.
-                </h3>
-                
-                {/* P with dark mode text color */}
-                <p className="text-base text-gray-700 dark:text-gray-300 mb-4">
-                    We plan to release the software September 15 and will be coming to your campus to share our work!
-                </p>
+        <h3 className="text-lg text-slate-300 mb-8 leading-relaxed">
+          With that information, you can Take Action by ordering a <span className="font-bold text-green-400">FREE</span> Focus on Energy box to make your home
+          more energy efficient. You can also comment on the <span className="font-bold text-blue-400">Public Service Commission</span> docket influencing Dane County&apos;s electric
+          future.
+        </h3>
 
-                {/* Footer P with dark mode text and border color */}
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-8 italic border-t border-gray-200 dark:border-gray-700 pt-4">
-                    Thank you to The City of Madison, United Way of Dane County, By Youth For Youth, and UW-Extension for your support in making climate
-                    resilience accessible!
-                </p>
-            </article>
+        <p className="text-base text-slate-300 mb-4">
+          We plan to release the software September 15 and will be coming to your campus to share our work!
+        </p>
+
+        <p className="text-sm text-slate-400 mt-8 italic border-t border-slate-700 pt-4">
+          Thank you to The City of Madison, United Way of Dane County, By Youth For Youth, and UW-Extension for your support in making climate
+          resilience accessible!
+        </p>
+      </article>
         </main>
     );
 }

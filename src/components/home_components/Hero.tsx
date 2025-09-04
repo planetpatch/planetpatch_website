@@ -1,10 +1,11 @@
 "use client";
 
 // components/Hero.tsx
-import Image from 'next/image'; // Import the Image component
+// import Image from 'next/image'; // Import the Image component
 import Link from 'next/link';
 import { gemunuLibre } from '../ui/fonts';
 import styles from '@/app/styles/stars.module.css'; // Import the new CSS module
+import Logo from '../navigation/navbar/Logo';
 
 // Button styles for Hero section
 const heroButtonBase = `
@@ -57,17 +58,11 @@ const Hero = () => {
           
           {/* Flex container to hold the logo and headline */}
           <div className="flex justify-center items-center gap-4 md:gap-6 flex-wrap">
-            <Image
-              src="/home_assets/hero_image.png" 
-              alt="PlanetPatch Logo"
-              width={500} // Adjust size as needed
-              height={500}
-              className="w-16 h-16 md:w-20 md:h-20" // Responsive sizing
-            />
+           <Logo />
             <h1
               className={`
                 font-gemunu text-5xl sm:text-6xl md:text-7xl lg:text-8xl
-                font-bold text-green-800 dark:text-slate-100
+                font-bold text-green-200 dark:text-slate-100
                 leading-tight ${gemunuLibre.className}
               `}
             >

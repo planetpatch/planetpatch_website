@@ -1,11 +1,9 @@
-"use client";
 
-// components/Hero.tsx
-// import Image from 'next/image'; // Import the Image component
+import { gemunuLibre } from "@/components/ui/fonts"
+
+import Image from 'next/image'; // Import the Image component
 import Link from 'next/link';
-import { gemunuLibre } from '../ui/fonts';
 import styles from '@/app/styles/stars.module.css'; // Import the new CSS module
-import Logo from '../navigation/navbar/Logo';
 
 // Button styles for Hero section
 const heroButtonBase = `
@@ -58,20 +56,26 @@ const Hero = () => {
           
           {/* Flex container to hold the logo and headline */}
           <div className="flex justify-center items-center gap-4 md:gap-6 flex-wrap">
-           <Logo />
+            <Image
+              src="/home_assets/hero_image.png" 
+              alt="PlanetPatch Logo"
+              width={500} // Adjust size as needed
+              height={500}
+              className="w-16 h-16 md:w-20 md:h-20" // Responsive sizing
+            />
             <h1
               className={`
                 font-gemunu text-5xl sm:text-6xl md:text-7xl lg:text-8xl
-                font-bold text-green-200 dark:text-slate-100
+                font-bold text-green-800 dark:text-slate-100
                 leading-tight ${gemunuLibre.className}
               `}
             >
-              Crafting Climate Resilience
+              Page Under Maintenance
             </h1>
           </div>
 
           <p className="mt-4 text-lg md:text-xl text-slate-100 dark:text-slate-200 max-w-3xl mx-auto">
-            Enabling everyday people to take small, actionable steps to build community climate resilience
+            Come visit us soon once this is ready!
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 mt-6">
@@ -94,4 +98,16 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+
+export default function Maintenance() {
+  return (
+    <main className="bg-white dark:bg-slate-900">
+      {/* Hero Section */}
+      {/* Updated to match the green background image and overlay from the About page */}
+
+          <Hero/>
+      </main>
+      
+      
+          )
+      }

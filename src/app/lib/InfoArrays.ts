@@ -65,20 +65,18 @@ export interface ProjectPost {
       excerpt:
         `The PlanetPatch energy tracker is a tool to inform residents about energy, renewables, and how they can take action.`,
       category: "Tech",
-      image: "/youthClimateAction.png",
-      href: 'https://www.cityofmadison.com/news/2025-04-24/new-round-of-youth-climate-fund-projects',
+      image: "/energy_tracker.png",
+      href: '/projects/energy-tracker',
     },
    
     {
-      id: "2",
-      title: "Indigenous Flora Rain Garden",
-      excerpt:
-        `Our Indigenous Flora Rain Garden project is a community oriented project where we build rain gardens around the city of Madison.
-        Rain gardens serve as an attractors for pollinators that keep our ecosystem healthy and to reduce flooding by being an absorbing
-        power for our city.`,
-      category: "Community",
-      image: "/youthClimateAction.png",
-      href: 'https://www.cityofmadison.com/news/2025-04-24/new-round-of-youth-climate-fund-projects',
+   id: "2",
+    title: "Indigenous Flora Rain Garden",
+    excerpt: `Our Indigenous Flora Rain Garden project is a community oriented project where we build rain gardens around the city of Madison. Rain gardens serve as an attractors for pollinators that keep our ecosystem healthy and to reduce flooding by being an absorbing power for our city.`,
+    category: "Community",
+    // Correctly assigned as a string
+    image: '/rain-garden.jpg',
+    href: '/projects/rain-garden',
     },
     
   ]
@@ -92,24 +90,3 @@ export type Project = {
   ProjectID: number | undefined;
   Status: string | undefined;
 }
-
-
-
-export type ClientType = {
-    createdAt: Date  | undefined ;
-    updatedAt: Date  | null | undefined;
-    AgentID: number | undefined;
-    FirstName: string;
-    LastName: string;
-    Email: string;
-    PhoneNumber: string | null;
-    ClientID: number | undefined;
-    DateOfBirth: string;
-    CompleteAddressLine: string;
-    Status: string | undefined;
-    LastInteractionDate: Date | null | undefined;
-    FollowUpDate: string | null | undefined;
-    LastFourSSN: string | null | undefined;
-    LastViewedDate: Date  | null | undefined;
-
-};

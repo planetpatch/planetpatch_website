@@ -8,20 +8,6 @@ import { projectPosts } from "../lib/InfoArrays"; // Ensure this path is correct
 // Import the new component
 import ProjectsDisplay from "./ProjectsDisplay"; // Adjust path to where you saved ProjectsDisplay.tsx
 
-// export const getCategoryColor = (category: ProjectPost["category"]) => {
-//   switch (category) {
-//     case "Tech":
-//       return "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300";
-//     case "Research":
-//       return "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300";
-//     case "Community":
-//       return "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300";
-//     case "Partnership":
-//       return "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300";
-//     default:
-//       return "bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-300";
-//   }
-// };
 
 export default function Projects() {
   return (

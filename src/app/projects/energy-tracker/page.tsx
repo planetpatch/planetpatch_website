@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import StarsBackground from '@/components/ui/StarsBackground';
+import { gemunuLibre } from '@/components/ui/fonts';
 
 export default function EnergyTracker() {
     return (
@@ -12,7 +13,7 @@ export default function EnergyTracker() {
                 {/* Image at the top */}
                 <div className="mb-8">
                     <Image
-                        src="/energy_tracker.png" // Replace with your image
+                        src="/energy_tracker.png" 
                         alt="Energy Tracker Blog Header"
                         width={800}
                         height={400}
@@ -34,13 +35,20 @@ export default function EnergyTracker() {
 
         <h3 className="text-lg text-slate-300 mb-8 leading-relaxed">
           With that information, you can Take Action by ordering a <span className="font-bold text-green-400">FREE</span> Focus on Energy box to make your home
-          more energy efficient. You can also comment on the <span className="font-bold text-blue-400">Public Service Commission</span> docket influencing Dane County&apos;s electric
-          future.
+            more energy efficient. You can also <span className="font-bold text-blue-400">Follow PlanetPatch</span> on Instagram and learn about <span className="font-bold text-green-400">Renewable Energy Credits </span>
+            that can push our utilities to adopt renewable energy faster! 🏎️ Finally, you can learn more about how PlanetPatch put together this application and 
+            how our energy system works at a larger scale. 
         </h3>
 
         <p className="text-base text-slate-300 mb-4">
-          We plan to release the software September 15 and will be coming to your campus to share our work!
-        </p>
+            The Energy Tracker is currently live and can be accessed by clicking the button below:
+          </p>
+          
+          <a href='https://energy-tracker.planetpatch.dev'
+            target="_blank"
+            rel="noopener noreferrer"
+            className={` pixel-button-base  text-green-700  ${gemunuLibre.className} bg-white text-decoration-underline w-full h-full flex items-center rounded-sm justify-center text-2xl`} >
+            https://energy-tracker.planetpatch.dev</a>
 
         <p className="text-sm text-slate-400 mt-8 italic border-t border-slate-700 pt-4">
           Thank you to The City of Madison, United Way of Dane County, By Youth For Youth, and UW-Extension for your support in making climate

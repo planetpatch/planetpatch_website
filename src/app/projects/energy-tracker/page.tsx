@@ -35,8 +35,9 @@ export default function EnergyTracker() {
 
         <h3 className="text-lg text-slate-300 mb-8 leading-relaxed">
           With that information, you can Take Action by ordering a <span className="font-bold text-green-400">FREE</span> Focus on Energy box to make your home
-          more energy efficient. You can also comment on the <span className="font-bold text-blue-400">Public Service Commission</span> docket influencing Dane County&apos;s electric
-          future.
+            more energy efficient. You can also <span className="font-bold text-blue-400">Follow PlanetPatch</span> on Instagram and learn about <span className="font-bold text-green-400">Renewable Energy Credits </span>
+            that can push our utilities to adopt renewable energy faster! 🏎️ Finally, you can learn more about how PlanetPatch put together this application and 
+            how our energy system works at a larger scale. 
         </h3>
 
         <p className="text-base text-slate-300 mb-4">

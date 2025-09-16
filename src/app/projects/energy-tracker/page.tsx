@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import StarsBackground from '@/components/ui/StarsBackground';
+import { gemunuLibre } from '@/components/ui/fonts';
 
 export default function EnergyTracker() {
     return (
@@ -12,7 +13,7 @@ export default function EnergyTracker() {
                 {/* Image at the top */}
                 <div className="mb-8">
                     <Image
-                        src="/energy_tracker.png" // Replace with your image
+                        src="/energy_tracker.png" 
                         alt="Energy Tracker Blog Header"
                         width={800}
                         height={400}
@@ -39,8 +40,14 @@ export default function EnergyTracker() {
         </h3>
 
         <p className="text-base text-slate-300 mb-4">
-          We plan to release the software September 15 and will be coming to your campus to share our work!
-        </p>
+            The Energy Tracker is currently live and can be accessed by clicking the button below:
+          </p>
+          
+          <a href='https://energy-tracker.planetpatch.dev'
+            target="_blank"
+            rel="noopener noreferrer"
+            className={` pixel-button-base  text-green-700  ${gemunuLibre.className} bg-white text-decoration-underline w-full h-full flex items-center rounded-sm justify-center text-2xl`} >
+            https://energy-tracker.planetpatch.dev</a>
 
         <p className="text-sm text-slate-400 mt-8 italic border-t border-slate-700 pt-4">
           Thank you to The City of Madison, United Way of Dane County, By Youth For Youth, and UW-Extension for your support in making climate

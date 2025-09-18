@@ -28,14 +28,17 @@ export default function EnergyTracker() {
                   rounded-lg shadow-xl backdrop-blur-sm border border-white/10 p-8">
                 
                 <div className="text-center mb-8">
-                    <Image
-                        src="/energy_tracker.png" 
-                        alt="Energy Tracker Blog Header"
-                        width={800}
-                        height={400}
-                        priority
-                        className="rounded-lg shadow-lg"
-                    />
+
+    {/* Dark Mode Image: Hidden by default, visible in dark mode */}
+    <Image
+        src="/project_assets/e_tracker_dark.png" 
+        alt="Energy Tracker Blog Header"
+        width={800}
+        height={400}
+        priority
+        className="rounded-lg shadow-lg"
+    />
+
                      <h1 className="text-4xl font-extrabold text-white mt-6 mb-4 leading-tight">
                         Energy Tracker
                     </h1>
@@ -94,7 +97,7 @@ export default function EnergyTracker() {
 
                 {/* --- A DEEPER DIVE (UPDATED) --- */}
                 <section id="deeper-dive" className="mb-10 scroll-mt-24">
-                    <h2 className={`text-3xl font-bold text-white mb-4 ${gemunuLibre.className}`}>A Deeper Dive: Who&apos;s Actually in Charge of Your Light Switch?</h2>
+                    <h2 className={`text-3xl font-bold text-white mb-4 ${gemunuLibre.className}`}>A Deeper Dive: Who&apos;s Actually in Charge of Your Light Switch? (Learn More)</h2>
                     <p className="text-lg text-slate-300 mb-8 leading-relaxed">
                         Ever flip a light switch and wonder… where does that power *actually* come from? 🤔 It feels simple, but behind your outlet is a huge, interconnected system with some big players making decisions that affect your bill and our planet. Let&apos;s pull back the curtain and see how it all works.
                     </p>

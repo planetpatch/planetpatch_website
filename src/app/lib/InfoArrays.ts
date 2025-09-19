@@ -65,7 +65,7 @@ export interface ProjectPost {
       excerpt:
         `The PlanetPatch energy tracker is a tool to inform residents about energy, renewables, and how they can take action.`,
       category: "Tech",
-      image: "/energy_tracker.png",
+      image: "/project_assets/e_tracker_dark.png",
       href: '/projects/energy-tracker',
     },
    

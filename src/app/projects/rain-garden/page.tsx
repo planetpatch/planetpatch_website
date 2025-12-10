@@ -40,10 +40,10 @@ export default function RainGarden() {
                     will be one of Madison&apos;s safeguard against the damage.
                 </h3>
                 
-                /* {/* P with dark mode text color */}
+                  {/* P with dark mode text color 
                 <p className="text-base text-gray-700 dark:text-gray-300 mb-4">
                     We will have a map showing the relative area of our rain gardens by September 31st. Stay tuned!
-                </p> */
+                </p> */}
 
                 {/* Footer P with dark mode text and border color */}
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-8 italic border-t border-gray-200 dark:border-gray-700 pt-4">

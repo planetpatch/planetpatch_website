@@ -23,7 +23,7 @@ export const navLinks: NavLink[] = [
       
     return (
         <header
-            className={`bg-white dark:bg-[#1e4f2c] flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 ${gemunuLibre.className} relative z-50`}
+            className={`bg-white/90 dark:bg-[#1e4f2c]/90 backdrop-blur-md border-b border-slate-200/80 dark:border-green-800/50 flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 ${gemunuLibre.className} relative z-50 transition-colors duration-200`}
         >
            <Logo />
             <button

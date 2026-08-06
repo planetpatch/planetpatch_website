@@ -13,7 +13,7 @@ const Sidebar = ({
 }): JSX.Element => {
   return (
     <div
-      className={`fixed inset-0 w-full h-full min-h-screen z-40 bg-white dark:bg-[#1e4f2c] 
+      className={`fixed inset-0 w-full h-full min-h-screen z-40 bg-white/95 dark:bg-[#1e4f2c]/95 backdrop-blur-md 
       flex flex-col items-center justify-center pt-24 pb-8 px-6 transition-all duration-300 ease-in-out md:hidden ${
         isOpen
           ? "opacity-100 pointer-events-auto visible"

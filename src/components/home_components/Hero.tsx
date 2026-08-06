@@ -80,26 +80,38 @@ const Hero = () => {
           </div>
 
           {/* Card 2: Main Featured Hero Image Card (Top-Right: 5 cols) */}
-          <div className="md:col-span-5 relative rounded-3xl overflow-hidden shadow-sm group min-h-[300px] sm:min-h-[360px] md:min-h-[420px] bg-slate-200 dark:bg-slate-800">
+          <Link
+            href="/projects/energy-tracker"
+            className="md:col-span-5 relative rounded-3xl overflow-hidden shadow-sm group min-h-[300px] sm:min-h-[360px] md:min-h-[420px] bg-slate-200 dark:bg-slate-800 block"
+          >
+            {/* Light Mode Image */}
             <Image
-              src="/home_assets/clean_energy_hero.png"
-              alt="Clean Energy Wind and Solar Solutions"
+              src="/project_assets/e_tracker_light.png"
+              alt="Energy Tracker Project"
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out dark:hidden"
+              priority
+            />
+            {/* Dark Mode Image */}
+            <Image
+              src="/project_assets/e_tracker_dark.png"
+              alt="Energy Tracker Project"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out hidden dark:block"
               priority
             />
             {/* Subtle Gradient Overlay & Badge */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6 sm:p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex items-end p-6 sm:p-8">
               <div className="text-white">
                 <span className="inline-block px-3 py-1 bg-green-500/90 text-slate-950 text-xs font-bold rounded-full uppercase tracking-wider mb-2">
-                  Featured Initiative
+                  Featured Project
                 </span>
                 <h3 className={`text-2xl sm:text-3xl font-bold ${gemunuLibre.className}`}>
-                  Renewable Energy Landscapes
+                  Energy Tracker
                 </h3>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Card 3: Secondary Feature Image Card (Bottom-Left: 4 cols) */}
           <div className="md:col-span-4 relative rounded-3xl overflow-hidden shadow-sm group min-h-[220px] sm:min-h-[240px] bg-slate-200 dark:bg-slate-800">

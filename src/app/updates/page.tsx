@@ -2,6 +2,7 @@ import { gemunuLibre } from "@/components/ui/fonts"
 import Image from "next/image"
 import Link from "next/link"
 import { modernButtonBase,donateButtonStyles } from "@/components/ui/buttons"
+import PageHero from "@/components/ui/PageHero"
 
 interface UpdatePost {
   id: string
@@ -98,29 +99,11 @@ const getCategoryColor = (category: UpdatePost["category"]) => {
 export default function Updates() {
   return (
     <>
-      {/* Hero Section - UPDATED with a new background image and overlay */}
-      <section 
-        className="relative py-20 md:py-28 bg-cover bg-center"
-        // NEW IMAGE: A picture of a solar panel farm.
-        style={{ backgroundImage: "url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
-      >
-        {/* UPDATED OVERLAY: A semi-transparent dark green for better theme alignment. */}
-        <div className="absolute inset-0 bg-opacity-50"></div>
-        
-        <div className="relative z-10 container mx-auto px-6 py-10 text-center bg-green-900/70 rounded-lg">
-          <div className="text-center">
-            <h1
-              className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 ${gemunuLibre.className}`}
-            >
-              Latest Updates
-            </h1>
-            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed">
-              Stay informed about our latest initiatives, research findings, community partnerships, and climate
-              resilience developments.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="LATEST NEWS"
+        title="Updates & Stories"
+        description="Stay informed about our latest initiatives, research findings, community partnerships, and climate resilience developments."
+      />
       
 
       <section className="py-16 md:py-20 bg-white dark:bg-slate-900">

@@ -1,22 +1,13 @@
-import { gemunuLibre } from "@/components/ui/fonts";
+import PageHero from "@/components/ui/PageHero";
 
 export default function Contact() {
   return (
     <>
-      <section className="bg-gradient-to-b from-green-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 md:py-24">
-              <div className="container mx-auto px-6">
-                <div className="text-center">
-                  <h1
-                    className={`text-4xl md:text-6xl font-bold text-slate-800 dark:text-white mb-6 ${gemunuLibre.className}`}
-                  >
-                    Contact Us
-                  </h1>
-                  <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                    Reach out to us about your questions and thoughts!
-                  </p>
-                </div>
-              </div>
-            </section>
+      <PageHero
+        badge="GET IN TOUCH"
+        title="Contact Us"
+        description="Reach out to us with your questions, ideas, or partnership opportunities."
+      />
 
        <section className="py-16 md:py-20 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-6">

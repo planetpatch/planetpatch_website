@@ -1,34 +1,16 @@
 import { gemunuLibre } from "@/components/ui/fonts"
 import ProgramCards from "./resources_components/ProgramCards"
 import { mgePrograms,alliantPrograms,govtPrograms,floodingInfo } from "./resources_components/resources_programs"
+import PageHero from "@/components/ui/PageHero"
 
-
-export default function Updates() {
+export default function Resources() {
   return (
     <>
-      {/* Hero Section - UPDATED with a new background image and overlay */}
-      <section 
-        className="relative py-20 md:py-28 bg-cover bg-center"
-        // NEW IMAGE: A picture of a solar panel farm.
-        style={{ backgroundImage: "url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
-      >
-        {/* UPDATED OVERLAY: A semi-transparent dark green for better theme alignment. */}
-        <div className="absolute inset-0  bg-opacity-50"></div>
-        
-        <div className="relative z-10 container mx-auto px-6 py-10 text-center bg-green-900/70 rounded-lg">
-          <div className="text-center">
-            <h1
-              // Changed text size to be larger (text-6xl, md:text-7xl, lg:text-8xl)
-              className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 ${gemunuLibre.className}`}
-            >
-              Resources
-            </h1>
-            <p className="text-lg md:text-xl text-slate-100 max-w-3xl mx-auto leading-relaxed">
-              Use these resources to start making a difference today!
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="TOOLS & GUIDES"
+        title="Community Resources"
+        description="Use these curated guides, tools, and statewide programs to start making an impact today."
+      />
       
 
       <section className="py-8 md:py-20 bg-white dark:bg-slate-900">

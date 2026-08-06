@@ -102,6 +102,7 @@ const About_Main = () => {
                   for resilient technologies, and support partners in
                   decarbonization and infrastructure upgrades.
                 </p>
+                <p> PlanetPatch Inc. is a tax-exempt organization under Section 501(c)(3) of the Internal Revenue Code.</p>
               </div>
             </div>
           </div>

@@ -91,7 +91,12 @@ const About_Main = () => {
                   for resilient technologies, and support partners in
                   decarbonization and infrastructure upgrades.
                 </p>
-                <p> PlanetPatch Inc. is a tax-exempt organization under Section 501(c)(3) of the Internal Revenue Code.</p>
+                     <h3
+                  className={`text-3xl font-semibold text-green-800 dark:text-green-300 mt-12 mb-4 ${gemunuLibre.className}`}
+                >
+                  Status & EIN
+                </h3>
+                <p> PlanetPatch Inc. is a tax-exempt organization under Section 501(c)(3) of the Internal Revenue Code. EIN: 33-3426398. For more information, contact us at planetpatch.dev@gmail.com. </p>
               </div>
             </div>
           </div>

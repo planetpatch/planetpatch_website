@@ -67,83 +67,90 @@ export default function Donate() {
 
   return (
     <>
-      <main className="max-w-2xl mx-auto p-8 md:p-10 text-white text-center border-3 border-dashed  dark:bg-slate-900 border-green-800 my-10 rounded-lg shadow-xl 
-">
-        <div className="mb-8">
-          <h1 className={`text-4xl md:text-5xl font-bold text-green-800 mb-3 ${gemunuLibre.className}`}>
-            Support PlanetPatch
-          </h1>
-          <h2 className={`text-xl md:text-2xl text-green-800 ${gemunuLibre.className}`}>
-            How much would you like to donate?
-          </h2>
-        </div>
+      {/* TODO: create a pattern background for future */}
+      <section className="min-h-[calc(100vh-5rem)] py-12 md:py-20 px-4 sm:px-6 bg-slate-50 dark:bg-[#0c180e] relative overflow-hidden transition-colors duration-300 flex items-center justify-center">
+        {/* Ambient background glow overlay */}
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-500/10 via-transparent to-transparent dark:from-green-600/20 dark:via-transparent dark:to-transparent"></div>
 
-        <div className="mb-8 space-y-4">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {presetAmounts.map((preset) => (
-              <button
-                key={preset}
-                onClick={() => handlePresetClick(preset)}
-                className={`
-                  p-3 rounded-md font-semibold text-lg transition-all duration-200 ease-in-out
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-600 focus:ring-green-800
-                  ${activePresetUI === preset
-                    ? 'bg-white text-green-700 scale-105 shadow-lg'
-                    : 'bg-green-700 hover:bg-green-400 border-green-800 text-white'
-                  }
-                `}
-              >
-                ${preset}
-              </button>
-            ))}
-          </div>
-          <div className="space-y-3">
-            <input
-              type="text"
-              value={customInputValue}
-              onChange={handleCustomInputChange}
-              onFocus={handleCustomInputFocus}
-              placeholder="Or Enter Custom Amount"
-              aria-label="Custom donation amount"
-              className="
-                p-3 rounded-md w-full max-w-xs mx-auto text-lg text-center 
-                text-black dark:text-black bg-gray-100 focus:bg-white 
-                focus:outline-none focus:ring-2 focus:ring-green-700 border border-gray-300
-              "
-            />
-            {/* Show Confirm button if custom input has a valid value AND no preset is active */}
-            {customInputValue && isValidCustomInput && activePresetUI === null && (
-              <button
-                onClick={handleConfirmCustomAmount}
-                className="
-                  w-full max-w-xs mx-auto px-6 py-3 rounded-md font-semibold text-lg transition-colors duration-200 ease-in-out
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-600 focus:ring-white
-                  bg-green-700 text-white hover:bg-white hover:border-3 hover:border-green-800 hover:text-green-800
-                "
-              >
-                Confirm ${formattedCustomAmountForButton}
-              </button>
-            )}
-          </div>
-        </div>
-        
-        {/* Conditionally render Elements and CheckoutPage based on committedAmount */}
-        {committedAmount > 0 ? (
-          <Elements stripe={stripePromise} options={elementsOptions} key={committedAmount}> {/* Keyed by committedAmount */}
-            <CheckoutPage amount={committedAmount} />
-          </Elements>
-        ) : (
-          <div className="p-4 my-4 text-center bg-green-700 rounded-md min-h-[100px] flex items-center justify-center">
-            {/* Placeholder for when CheckoutPage is hidden */}
-            <p className="font-semibold">
-              {activePresetUI === null && customInputValue
-                ? "Please confirm your custom amount."
-                : "Select or enter an amount to donate."
-              }
+        <main className="max-w-2xl w-full mx-auto p-8 sm:p-10 md:p-12 text-slate-900 dark:text-slate-100 bg-white dark:bg-gradient-to-b dark:from-[#183a20] dark:to-[#112916] border border-slate-200/80 dark:border-green-700/30 dark:shadow-[0_0_50px_-12px_rgba(34,197,94,0.25)] rounded-3xl shadow-xl transition-all duration-300 relative z-10">
+          <div className="mb-8 text-center">
+            <h1 className={`text-4xl md:text-5xl font-bold text-green-700 dark:text-green-400 mb-3 ${gemunuLibre.className}`}>
+              Support PlanetPatch
+            </h1>
+            <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-md mx-auto">
+              How much would you like to donate?
             </p>
           </div>
-        )}
-      </main>
+
+          <div className="mb-8 space-y-5">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+              {presetAmounts.map((preset) => (
+                <button
+                  key={preset}
+                  onClick={() => handlePresetClick(preset)}
+                  className={`
+                    p-3.5 rounded-2xl font-bold text-lg sm:text-xl transition-all duration-200 ease-in-out
+                    focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900
+                    ${activePresetUI === preset
+                      ? 'bg-green-600 dark:bg-green-500 text-white dark:text-slate-950 scale-105 shadow-md dark:shadow-[0_0_20px_rgba(34,197,94,0.4)] border-2 border-green-600 dark:border-green-400'
+                      : 'bg-slate-100 dark:bg-slate-900/60 text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-800/80'
+                    }
+                  `}
+                >
+                  ${preset}
+                </button>
+              ))}
+            </div>
+            <div className="flex flex-col items-center space-y-3.5 pt-1">
+              <input
+                type="text"
+                value={customInputValue}
+                onChange={handleCustomInputChange}
+                onFocus={handleCustomInputFocus}
+                placeholder="Or Enter Custom Amount ($)"
+                aria-label="Custom donation amount"
+                className="
+                  p-3.5 rounded-2xl w-full max-w-xs text-center font-semibold text-lg
+                  text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-slate-900/80
+                  focus:bg-white dark:focus:bg-slate-950 focus:outline-none 
+                  focus:ring-2 focus:ring-green-500 border border-slate-300 dark:border-slate-700/80
+                  transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500
+                "
+              />
+              {customInputValue && isValidCustomInput && activePresetUI === null && (
+                <button
+                  onClick={handleConfirmCustomAmount}
+                  className="
+                    w-full max-w-xs px-6 py-3.5 rounded-2xl font-bold text-base uppercase tracking-wider
+                    bg-green-600 dark:bg-green-500 text-white dark:text-slate-950
+                    hover:bg-green-700 dark:hover:bg-green-400 shadow-md dark:shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-all
+                    focus:outline-none focus:ring-2 focus:ring-green-500
+                  "
+                >
+                  Confirm ${formattedCustomAmountForButton}
+                </button>
+              )}
+            </div>
+          </div>
+          
+          {/* Conditionally render Elements and CheckoutPage based on committedAmount */}
+          {committedAmount > 0 ? (
+            <Elements stripe={stripePromise} options={elementsOptions} key={committedAmount}> {/* Keyed by committedAmount */}
+              <CheckoutPage amount={committedAmount} />
+            </Elements>
+          ) : (
+            <div className="p-6 my-4 text-center bg-slate-100 dark:bg-slate-900/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60">
+              {/* Placeholder for when CheckoutPage is hidden */}
+              <p className="font-semibold text-slate-700 dark:text-slate-300">
+                {activePresetUI === null && customInputValue
+                  ? "Please confirm your custom amount to proceed to payment."
+                  : "Select or enter an amount to donate."
+                }
+              </p>
+            </div>
+          )}
+        </main>
+      </section>
     </>
   );
 }

@@ -91,7 +91,7 @@ const About_Main = () => {
                   for resilient technologies, and support partners in
                   decarbonization and infrastructure upgrades.
                 </p>
-                     <h3
+                                <h3
                   className={`text-3xl font-semibold text-green-800 dark:text-green-300 mt-12 mb-4 ${gemunuLibre.className}`}
                 >
                   Status & EIN

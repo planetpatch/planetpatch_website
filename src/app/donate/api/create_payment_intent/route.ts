@@ -1,13 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-05-28.basil",
-  typescript: true,
-})
-
 export async function POST(request: NextRequest) {
   try {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      return NextResponse.json(
+        { error: "Stripe secret key is not configured" },
+        { status: 500 }
+      );
+    }
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: "2025-08-27.basil",
+      typescript: true,
+    });
     const { amount } = await request.json();
 
     const paymentIntent = await stripe.paymentIntents.create({

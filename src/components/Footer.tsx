@@ -4,7 +4,7 @@ import { gemunuLibre } from './ui/fonts';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 // Placeholder for social icons - you can replace these with actual icon components (e.g., from react-icons or SVGs)
-const FacebookPlaceholder = () => <Icon icon="logos:facebook"  width="36" height="36" />
+const FacebookPlaceholder = () => <Icon icon="logos:facebook" width="36" height="36" />
 const InstagramPlaceholder = () => <Icon icon="skill-icons:instagram" width="36" height="36" />
 const LinkedinPlaceholder = () => <Icon icon="skill-icons:linkedin" width="36" height="36" />
 const BlueskyPlaceholder = () => <Icon icon="logos:bluesky" width="36" height="32" />
@@ -18,8 +18,8 @@ interface FooterLink {
 
 const footerNavLinks: FooterLink[] = [
   { href: "/about", label: "ABOUT" },
-    { href: "/resources", label: "RESOURCES" },
-    { href: "/projects", label: "PROJECTS" },
+  { href: "/resources", label: "RESOURCES" },
+  { href: "/projects", label: "PROJECTS" },
   { href: "/updates", label: "UPDATES" },
   { href: "/contact", label: "CONTACT" },
 ];
@@ -27,8 +27,8 @@ const footerNavLinks: FooterLink[] = [
 // Example social links - update with your actual URLs
 const socialLinks = [
   { href: "https://www.facebook.com/planetpatch.dev/", icon: FacebookPlaceholder, label: "Facebook" },
-    { href: "https://www.instagram.com/planetpatch.dev/", icon: InstagramPlaceholder, label: "Instagram" },
-    { href: "https://bsky.app/profile/planetpatch.bsky.social", icon: BlueskyPlaceholder, label: "BlueSky" },
+  { href: "https://www.instagram.com/planetpatch.dev/", icon: InstagramPlaceholder, label: "Instagram" },
+  { href: "https://bsky.app/profile/planetpatch.bsky.social", icon: BlueskyPlaceholder, label: "BlueSky" },
   { href: "https://www.linkedin.com/company/planetpatch/", icon: LinkedinPlaceholder, label: "LinkedIn" },
   // New: X (Twitter) link
   { href: "https://x.com/PlanetPatchDev", icon: XPlaceholder, label: "X (Twitter)" },
@@ -55,7 +55,7 @@ const Footer = () => {
         </nav>
 
         <div className="flex justify-center items-center space-x-5 md:space-x-6 mb-8 md:mb-10">
-          
+
         </div>
 
         {/* Middle section: Social Media Icons */}
@@ -69,13 +69,14 @@ const Footer = () => {
               aria-label={social.label}
               className="text-slate-500 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-150"
             >
-                <social.icon/>
+              <social.icon />
             </a>
           ))}
         </div>
 
         {/* Bottom section: Copyright */}
         <div className="text-center">
+          <p className="text-sm text-slate-500 dark:text-slate-400"> 588 North Midvale Blvd. Madison, WI 53705 </p>
           <p className="text-sm text-slate-500 dark:text-slate-400">
             &copy; {new Date().getFullYear()} PlanetPatch. All rights reserved.
           </p>

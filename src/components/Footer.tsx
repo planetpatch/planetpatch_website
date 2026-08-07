@@ -78,7 +78,8 @@ const Footer = () => {
         <div className="text-center">
           <p className="text-sm text-slate-500 dark:text-slate-400"> 588 North Midvale Blvd. Madison, WI 53705 </p>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            &copy; {new Date().getFullYear()} PlanetPatch. All rights reserved.
+            Official website operated by PlanetPatch Inc., a 501(c)(3) non-profit organization. <br />
+            &copy; {new Date().getFullYear()} PlanetPatch Inc. All rights reserved.
           </p>
         </div>
       </div>

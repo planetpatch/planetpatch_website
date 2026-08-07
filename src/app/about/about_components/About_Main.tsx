@@ -2,6 +2,7 @@ import { gemunuLibre } from "@/components/ui/fonts";
 import Link from "next/link";
 import { teamMembers } from "@/app/lib/InfoArrays";
 import { modernButtonBase, donateButtonStyles } from "@/components/ui/buttons";
+import PageHero from "@/components/ui/PageHero";
 
 const About_Main = () => {
   // NEW: Corrected leaf animation loop
@@ -10,24 +11,12 @@ const About_Main = () => {
 
   return (
     <>
+      <PageHero
+        badge="OUR MISSION"
+        title="About PlanetPatch"
+        description="Enabling everyday people to take small, actionable steps to build community climate resilience."
+      />
       <main className="bg-gray-50 dark:bg-slate-900">
-        {/* Hero Section */}
-        <section
-          className="relative py-20 md:py-28 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
-          }}
-        >
-          <div className="absolute inset-0  bg-opacity-50"></div>
-          <div className="relative z-10 container mx-auto px-6 py-10 text-center bg-green-900/70 rounded-lg">
-            <h1
-              className={`text-6xl md:text-7xl lg:text-8xl font-bold text-white ${gemunuLibre.className}`}
-            >
-              About PlanetPatch
-            </h1>
-          </div>
-        </section>
 
         {/* Origins & Direction - NEW Themed Animated Background */}
         <section
@@ -102,7 +91,7 @@ const About_Main = () => {
                   for resilient technologies, and support partners in
                   decarbonization and infrastructure upgrades.
                 </p>
-                                <h3
+                <h3
                   className={`text-3xl font-semibold text-green-800 dark:text-green-300 mt-12 mb-4 ${gemunuLibre.className}`}
                 >
                   Status & EIN

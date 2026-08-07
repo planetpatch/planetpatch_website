@@ -107,15 +107,15 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
     // Show a more specific message if amount is invalid for fetching clientSecret
     if (amount <= 0 && !loading) { // Check !loading to avoid message flash during valid amount processing
         return (
-            <div className="text-center p-4 text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-slate-700 rounded-md">
+            <div className="text-center p-5 text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 font-medium">
                 Please select or enter a valid donation amount.
             </div>
         );
     }
     return (
-      <div className="flex items-center justify-center py-4">
+      <div className="flex items-center justify-center py-6">
         <div
-          className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+          className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-green-600 border-e-transparent text-green-600 dark:text-green-400"
           role="status"
         >
           <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
@@ -127,17 +127,17 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-2 rounded-md">
+    <form onSubmit={handleSubmit} className="bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 p-5 sm:p-6 rounded-2xl shadow-inner mt-4">
       {/* The PaymentElement will only show if clientSecret is valid */}
       <PaymentElement />
 
-      {errorMessage && <div className="text-red-600 text-sm mt-2 text-center">{errorMessage}</div>}
+      {errorMessage && <div className="text-red-600 dark:text-red-400 text-sm mt-3 text-center font-medium">{errorMessage}</div>}
 
       <button
         disabled={!stripe || loading || !clientSecret || amount <= 0} // Ensure amount is positive
-        className="text-white w-full p-5 bg-black mt-2 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse"
+        className="w-full py-4 px-6 bg-green-600 dark:bg-green-500 hover:bg-green-700 dark:hover:bg-green-400 text-white dark:text-slate-950 rounded-xl font-bold text-base uppercase tracking-wider shadow-md transition-all mt-5 disabled:opacity-50 disabled:animate-pulse"
       >
-        {!loading ? `Pay $${amount.toFixed(2)}` : "Processing..."} {/* MODIFIED HERE */}
+        {!loading ? `Pay $${amount.toFixed(2)}` : "Processing..."}
       </button>
     </form>
   );

@@ -78,7 +78,14 @@ export interface ProjectPost {
     image: '/rain-garden.jpg',
     href: '/projects/rain-garden',
     },
-    
+    {
+      id: "3",
+      title: "Electric Rates Oversight",
+      excerpt: `Exploring electricity rate issues in Wisconsin and Arizona to identify actionable ways for everyday people to push back against unfair utility rate hikes.`,
+      category: "Research",
+      image: '/rain-garden.jpg',
+      href: '/projects/electric-rates-oversight',
+    },
   ]
 
   

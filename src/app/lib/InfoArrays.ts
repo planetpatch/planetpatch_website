@@ -90,6 +90,7 @@ export interface ProjectPost {
 
   
 //   ARTICLE POSTS 
+import { getAllArticles } from "./articles";
 
 export interface ArticlePost {
     id: string
@@ -100,16 +101,14 @@ export interface ArticlePost {
     href: string
   }
 
-export const articlePosts: ArticlePost[] = [
-    {
-      id: "1",
-      title: "Understanding Wisconsin & Arizona Utility Rates",
-      excerpt: `An in-depth look into electricity pricing structures, utility regulatory oversight, and consumer protection strategies.`,
-      category: "Research",
-      image: "/rain-garden.jpg",
-      href: "/articles/electric-rates-oversight",
-    },
-]
+export const articlePosts: ArticlePost[] = getAllArticles().map((article, index) => ({
+  id: String(index + 1),
+  title: article.title,
+  excerpt: article.excerpt,
+  category: article.category,
+  image: article.image,
+  href: `/articles/${article.slug}`,
+}));
 
 
 export type Project = {

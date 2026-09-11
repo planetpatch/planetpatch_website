@@ -89,6 +89,27 @@ export interface ProjectPost {
   ]
 
   
+//   ARTICLE POSTS 
+
+export interface ArticlePost {
+    id: string
+    title: string
+    excerpt: string
+    category: "Tech" | "Research" | "Community" | "Partnership"
+    image: string
+    href: string
+  }
+
+export const articlePosts: ArticlePost[] = [
+    {
+      id: "1",
+      title: "Understanding Wisconsin & Arizona Utility Rates",
+      excerpt: `An in-depth look into electricity pricing structures, utility regulatory oversight, and consumer protection strategies.`,
+      category: "Research",
+      image: "/rain-garden.jpg",
+      href: "/articles/electric-rates-oversight",
+    },
+]
 
 
 export type Project = {

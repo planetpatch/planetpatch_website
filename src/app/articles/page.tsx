@@ -1,10 +1,20 @@
 import { gemunuLibre } from "@/components/ui/fonts";
 import { modernButtonBase, donateButtonStyles } from "@/components/ui/buttons";
-import { articlePosts } from "../lib/InfoArrays";
+import { getAllArticles } from "../lib/articles";
 import ArticlesDisplay from "./ArticlesDisplay";
 import PageHero from "@/components/ui/PageHero";
 
 export default function Articles() {
+  const articles = getAllArticles();
+  const posts = articles.map((article, index) => ({
+    id: String(index + 1),
+    title: article.title,
+    excerpt: article.excerpt,
+    category: article.category,
+    image: article.image,
+    href: `/articles/${article.slug}`,
+  }));
+
   return (
     <>
       <PageHero
@@ -14,7 +24,7 @@ export default function Articles() {
       />
       <main className="bg-white dark:bg-slate-900">
         <ArticlesDisplay
-          posts={articlePosts}
+          posts={posts}
           fontClassName={gemunuLibre.className}
           buttonBaseStyles={modernButtonBase}
           buttonSpecificStyles={donateButtonStyles}

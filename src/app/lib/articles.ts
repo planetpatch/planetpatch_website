@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from '@11ty/gray-matter';
+import { extractTocSections, Section } from './toc';
 
 export interface ArticleData {
   slug: string;
@@ -12,6 +13,7 @@ export interface ArticleData {
   image: string;
   readTime: string;
   content: string;
+  sections: Section[];
 }
 
 const articlesDirectory = path.join(process.cwd(), 'src/content/articles');
@@ -33,6 +35,7 @@ export function getArticleBySlug(slug: string): ArticleData | null {
 
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
+  const sections = extractTocSections(content);
 
   return {
     slug: realSlug,
@@ -44,6 +47,7 @@ export function getArticleBySlug(slug: string): ArticleData | null {
     image: data.image || '/rain-garden.jpg',
     readTime: data.readTime || '3 min read',
     content,
+    sections,
   };
 }
 

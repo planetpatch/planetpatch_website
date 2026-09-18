@@ -7,10 +7,7 @@ category: "Research"
 image: "/rain-garden.jpg"
 readTime: "15 min read"
 ---
-
-# Income Data and the "Just and Reasonable" Standard
-
-### A Policy Paper on Distributional Evidence in Arizona Ratemaking and the Case Against Formula Rate Adoption Under Current Economic Conditions
+*A Policy Paper on Distributional Evidence in Arizona Ratemaking and the Case Against Formula Rate Adoption Under Current Economic Conditions*
 
 ---
 

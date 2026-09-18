@@ -8,8 +8,6 @@ image: "/rain-garden.jpg"
 readTime: "4 min read"
 ---
 
-# Understanding Wisconsin & Arizona Utility Rates
-
 As clean energy transitions accelerate across North America, residents in **Wisconsin** and **Arizona** are facing unprecedented shifts in utility rate structures. Understanding the mechanics of electric bill increases is the first step toward advocating for energy fairness and affordability.
 
 ---

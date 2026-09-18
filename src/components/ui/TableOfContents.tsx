@@ -1,12 +1,7 @@
 'use client'; 
 
 import React, { useState, useEffect } from 'react';
-
-interface Section {
-  id: string;
-  title: string;
-  level: 'main' | 'sub';
-}
+import { Section } from '@/app/lib/toc';
 
 interface TableOfContentsProps {
   sections: Section[];
@@ -16,6 +11,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ sections }) => {
   const [activeId, setActiveId] = useState('');
 
   useEffect(() => {
+    if (!sections || sections.length === 0) return;
+
     const handleScroll = () => {
       // Find the section that is currently closest to the top of the viewport
       const currentSection = sections.findLast(section => {
@@ -25,10 +22,10 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ sections }) => {
         // The element is considered active if its top is at or above the 150px mark
         return rect.top <= 150;
       });
-      setActiveId(currentSection ? currentSection.id : '');
+      setActiveId(currentSection ? currentSection.id : (sections[0]?.id || ''));
     };
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Run on initial load
 
     return () => {
@@ -36,25 +33,26 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ sections }) => {
     };
   }, [sections]);
 
+  if (!sections || sections.length === 0) {
+    return null;
+  }
+
   return (
-    // These CSS classes are the key to making the component "follow" you.
-    // 'sticky' tells it to scroll until it hits the 'top-24' position, then stick.
-    // 'self-start' is crucial in a flex layout to allow sticky positioning.
-    <aside className="sticky top-24 self-start w-64 p-4 rounded-lg shadow-xl
-                      bg-slate-900/30 backdrop-blur-sm border border-white/10
+    <aside className="sticky top-24 self-start w-64 max-h-[calc(100vh-8rem)] overflow-y-auto p-5 rounded-xl shadow-xl
+                      bg-white/80 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-white/10
                       hidden lg:block">
-      <h2 className="text-xl font-bold text-white mb-4 border-b border-white/10 pb-2">
+      <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-3 border-b border-slate-200 dark:border-white/10 pb-2">
         On This Page
       </h2>
-      <ul className="space-y-2">
+      <ul className="space-y-1.5 text-sm">
         {sections.map((section) => (
-          <li key={section.id} className={section.level === 'sub' ? 'ml-4' : ''}>
+          <li key={section.id} className={section.level === 'sub' ? 'ml-3' : ''}>
             <a
               href={`#${section.id}`}
-              className={`transition-colors text-sm ${
+              className={`block py-1 transition-colors leading-snug rounded px-1.5 ${
                 activeId === section.id
-                  ? 'text-white font-bold' // Style for the active link
-                  : 'text-slate-300 hover:text-white' // Default style
+                  ? 'text-green-600 dark:text-green-400 font-semibold bg-green-50/50 dark:bg-green-950/30'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/50 dark:hover:bg-slate-800/30'
               }`}
             >
               {section.title}

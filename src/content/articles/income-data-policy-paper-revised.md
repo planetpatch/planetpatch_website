@@ -1,7 +1,7 @@
 ---
 title: "Income Data and the \"Just and Reasonable\" Standard"
-date: "September 11, 2026"
-author: "PlanetPatch Research Team"
+date: "September 18, 2026"
+author: "Gabriel A. Saiz"
 excerpt: "A policy paper on distributional evidence in Arizona ratemaking and the case against formula rate adoption under current economic conditions."
 category: "Research"
 image: "/rain-garden.jpg"
